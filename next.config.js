@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
 
+const withFonts = require('next-fonts');
+const createNextIntlPlugin = require('next-intl/plugin');
+
 const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'via.placeholder.com',
-        port: '',
       },
       {
         protocol: 'https',
@@ -15,24 +17,15 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'api-stars-of-africa.merakitechs.com',
-        port: '',
       },
     ],
   },
-};
-
-const withFonts = require('next-fonts');
-
-module.exports = withFonts({
-  enableSvg: true,
   webpack(config, options) {
     return config;
   },
-});
-
-module.exports = nextConfig;
-const createNextIntlPlugin = require('next-intl/plugin');
+  enableSvg: true,
+};
 
 const withNextIntl = createNextIntlPlugin();
 
-module.exports = withNextIntl(nextConfig);
+module.exports = withNextIntl(withFonts(nextConfig));
