@@ -1,0 +1,70 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.card {
+  @include flex(center, space-between, column, 20px);
+  background-color: transparent;
+  border-radius: 20px;
+  transition: background-color 0.2s ease;
+  transition:
+    transform 1s ease,
+    box-shadow 1s ease;
+
+  &:hover {
+    box-shadow: 0px 0px 4px 0px #6C6C6C2E;
+  }
+
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    height: 100%;
+
+    .heading {
+      font-family: var(--bukra-bold);
+      font-size: 32px;
+      color: var(--text-color);
+      text-align: center;
+      min-height: 50px;
+
+      @include md {
+        font-size: 25px;
+      }
+    }
+
+    .details {
+      font-family: Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: lighter;
+      color: var(--text-color-light);
+      margin: 10px 0px;
+      line-height: 30px;
+      flex-grow: 1;
+
+      @include md {
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        margin-block: 1rem 2.6rem;
+      }
+    }
+
+    .button {
+      width: 100%;
+      
+      & > * {
+        width: 100%;
+      }
+    }
+  }
+}

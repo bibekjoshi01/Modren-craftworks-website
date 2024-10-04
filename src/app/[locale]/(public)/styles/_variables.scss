@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$primary-color: #045161; // Solid Primary
+$primary-color-medium: rgba(4, 81, 97, 0.5); // Primary with 50% opacity
+$primary-color-light: rgba(4, 81, 97, 0.06); // Primary with 6% opacity
+
+$secondary-color: #2cb4c6; // Solid Secondary
+$secondary-color-medium: rgba(44, 180, 198, 0.28); // Secondary with 28% opacity
+$secondary-color-light: rgba(44, 180, 198, 0.06); // Secondary with 6% opacity
+
+$gradient-linear-full: linear-gradient(
+  90deg,
+  #045161 0%,
+  #2cb4c6 100%
+); // Linear Gradient 100%
+$gradient-radial-full: radial-gradient(
+  circle,
+  #045161,
+  #2cb4c6
+); // Radial Gradient 100%
+$gradient-linear-opacity: linear-gradient(
+  90deg,
+  rgba(4, 81, 97, 0.5) 0%,
+  rgba(4, 81, 97, 0.3) 50%,
+  rgba(4, 81, 97, 0) 100%
+); // Linear Gradient with opacity transitions
+$gradient-linear-white: linear-gradient(
+  90deg,
+  rgba(4, 81, 97, 0.4),
+  rgba(255, 255, 255, 1)
+); // Linear Gradient with white and primary
+
+$gradient-gray-light: linear-gradient(
+  90deg,
+  rgba(231, 231, 231, 0.2),
+  rgba(255, 255, 255, 1)
+); // Light gray gradient
+$gradient-gray-medium: linear-gradient(
+  90deg,
+  rgba(144, 144, 144, 0.2),
+  rgba(255, 255, 255, 1)
+); // Medium gray gradient
+
+$text-color-1: #232323; // Text 1 (Darkest)
+$text-color-2: #4d4d4d; // Text 2
+$text-color-3: #696969; // Text 3
+$text-color-4: #939393; // Text 4
+$text-color-5: #a9a9a9; // Text 5
+
+$textfield-text: #ababab; // Textfield text color
+$textfield-outline: #d4d4d4; // Textfield outline color
+
+$primaryFont: 'Questrial', sans-serif;
+$secondaryFont: 'Montserrat', sans-serif;
+$tertiaryFont: 'Roboto', sans-serif;
+
+$sectionPaddingX: 0 4rem;
+$sectionPaddingY: 4rem 0;
+$sectionMarginY: 2rem 0;
+$sectionMarginX: 2rem 0;
+$mobileSectionPaddingX: 0 2rem;
+$mobileSectionMarginY: 3rem 0;
+$maxWidth: 1920px;

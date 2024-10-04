@@ -1,0 +1,298 @@
+@import '../../styles/variables';
+@import '../../styles/mixin';
+
+.hero {
+  @include flex(center, space-between, row, clamp(2rem, 4vw, 6rem));
+  flex-wrap: wrap;
+  max-width: $maxWidth;
+  margin: 1rem auto 40px auto;
+  padding: 0 40px;
+  font-family: $secondaryFont;
+
+  @include md {
+    margin-top: 120px;
+    padding: 0 20px;
+  }
+
+  .left {
+    flex: 1.2;
+
+    @include md {
+      flex: 1;
+      width: 100%;
+    }
+
+    .heading {
+      @include font(var(--bukra-bold), 3.5rem, 700);
+
+      @include xl {
+        font-size: 3.5rem;
+      }
+
+      @include md {
+        font-size: 3rem;
+      }
+
+      @include sm {
+        font-size: 2.5rem;
+      }
+
+      @include xs {
+        font-size: 24px;
+      }
+    }
+
+    .animatedText {
+      font-size: 60px;
+      background-image: linear-gradient(
+        to right,
+        var(--primary-900),
+        var(--primary-300)
+      );
+      color: transparent;
+      background-clip: text;
+
+      @include xl {
+        font-size: 60px;
+      }
+
+      @include md {
+        font-size: 50px;
+      }
+
+      @include sm {
+        font-size: 40px;
+      }
+
+      @include xs {
+        font-size: 24px;
+      }
+    }
+
+    .deatiltext {
+      @include font(var(--bukra-medium), 24px, 500);
+      margin-top: 30px;
+      line-height: 1.5;
+      color: $text-color-3;
+
+      @include xl {
+        font-size: 24pxpx;
+      }
+
+      @include md {
+        font-size: 18px;
+      }
+
+      @include sm {
+        font-size: 16px;
+      }
+
+      @include xs {
+        font-size: 14px;
+      }
+    }
+
+    .buttons {
+      @include flex(center, flex-start, row, 10px);
+      margin-top: 30px;
+
+      @include md {
+        gap: 20px;
+      }
+
+      svg {
+        fill: var(--primary-900);
+      }
+
+      .filledBtn {
+        @include font(var(--roboto), 20px, 600);
+        @include flex(center, center, row, 10px);
+        text-transform: uppercase;
+        color: white;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 8px;
+        padding: 16px 56px;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        overflow: hidden;
+
+        transition:
+          background-color 0.5s ease,
+          color 0.25s ease;
+        will-change: background-color, color;
+
+        &:hover {
+          background: $gradient-linear-full;
+          color: white; // Ensure text color remains white
+
+          transition: background 0.5s ease;
+        }
+
+        @include md {
+          font-size: 18px;
+        }
+
+        @include sm {
+          width: 100%;
+          font-size: 16px;
+        }
+
+        @include xs {
+          font-size: 14px;
+        }
+      }
+
+      .outlinedBtn {
+        @include flex(center, center, row, 20px);
+        @include font(var(--roboto), 20px, 600);
+        background-color: transparent;
+        text-transform: uppercase;
+        color: $primary-color;
+        border-radius: 8px;
+        border: none;
+        padding: 12px 56px;
+        cursor: pointer;
+
+        @include md {
+          font-size: 18px;
+        }
+
+        @include sm {
+          width: 100%;
+          font-size: 16px;
+        }
+
+        @include xs {
+          font-size: 14px;
+        }
+      }
+
+      @include sm {
+        flex-direction: column;
+      }
+    }
+
+    .features {
+      @include flex(center, center, row, 20px);
+      margin-top: 100px;
+      flex-wrap: wrap;
+      background-color: $secondary-color-light;
+      padding: 40px 0;
+      border-radius: 10px;
+
+      @include md {
+        margin-top: 50px;
+      }
+
+      .feature {
+        @include flex(center, center, row, 10px);
+        flex: 1;
+        color: $text-color-3;
+        @include font(--var(--bukra-medium), 18px, 600);
+        min-width: 60px;
+
+        &:nth-child(2) {
+          gap: 20px;
+          svg {
+            scale: 1.5;
+          }
+        }
+
+        svg {
+          fill: $primary-color;
+          scale: 0.8;
+        }
+      }
+
+      @include xs {
+        gap: 30px;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    flex: 1;
+
+    // Default styles for larger screens
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      aspect-ratio: 5 / 2;
+      object-fit: cover;
+    }
+
+    .two {
+      display: flex;
+      gap: 10px;
+
+      img {
+        aspect-ratio: 5 / 3;
+      }
+    }
+
+    .one {
+      grid-column: span 2;
+    }
+
+    // Responsive adjustments for smaller screens
+    @include md {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .two {
+        flex-direction: column;
+
+        img {
+          aspect-ratio: auto; // Adjust aspect ratio for more flexibility
+        }
+      }
+
+      .one {
+        grid-column: span 1; // Each image takes one column on smaller screens
+      }
+    }
+
+    @include sm {
+      gap: 15px;
+
+      img {
+        border-radius: 10px;
+        object-fit: contain; // Adjust object fit for small screens
+      }
+    }
+
+    @include xs {
+      gap: 10px;
+
+      img {
+        aspect-ratio: auto;
+        width: 100%;
+        height: auto;
+      }
+
+      .one {
+        grid-column: span 1;
+      }
+
+      .two {
+        gap: 10px;
+        flex-direction: column;
+
+        img {
+          aspect-ratio: auto;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1280px) {
+    flex-direction: column;
+  }
+}

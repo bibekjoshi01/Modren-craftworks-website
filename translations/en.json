@@ -1,0 +1,213 @@
+{
+  "global": {
+    "no-data": "NO DATA AVAILABLE",
+    "button": {
+      "view-all": "VIEW ALL",
+      "add-to-cart": "ADD TO CART"
+    }
+  },
+  "home": {
+    "navbar": {
+      "header": {
+        "login": "Login",
+        "subscriber": "Subscribe"
+      },
+      "menu": {
+        "home": "Home",
+        "magazine": "Magazine",
+        "amazing": "Amazing Africans",
+        "issues": "Issues and Solution",
+        "blogging": "Blogging",
+        "advertise": "Advertise with us",
+        "awards": "Awards"
+      },
+      "magazine": {
+        "digital": "Digital",
+        "print": "Print"
+      }
+    },
+    "content-header": {
+      "title": "Highlights from Current Issue",
+      "highlights": "Highlights",
+      "header": "Interview",
+      "title2": "Masters Of Business",
+      "title3": "Fashion & Beauty",
+      "title4": "Travel",
+      "header2": "BUY YOUR PRINT VERSION",
+      "header3": "TRENDING",
+      "header4": "TOP  BRANDS",
+      "button": "View All"
+    }
+  },
+  "amazingAfricans": {
+    "title": "WHO ARE YOUR AMAZING AFRICANS",
+    "detail": "Amazing Africans are individuals who have significantly contributed to the betterment of their country or the entire African continent. These remarkable persons may be from any walk of life, and their impactful deeds resonate within their communities and beyond. They could be historical figures whose legacies continue to influence today or contemporary heroes shaping the future. Regardless of whether they reside within Africa or hail from the diaspora, their efforts and achievements play a crucial role in driving positive change and development across the continent. Who are your Amazing African?",
+    "subHeader": "Who Are Your Amazing Africans",
+    "africanName": "Amazing African Name",
+    "AfricanCountry": "African Country",
+    "description": "Why Are They Amazing",
+    "name": "Your Name",
+    "email": "Email Address",
+    "country": "Country",
+    "agree": "I agree to the terms and condition",
+    "button": "Send",
+    "errorMsg": {
+      "name": "**African Name is compulsory",
+      "nameMinLength": "Name must be at least 6 characters",
+      "nameMaxLength": " Name must be at most 25 characters",
+      "AfricanCountry": "Country is compulsory",
+      "email": "**Email is required",
+      "validEmail": "Invalid email format",
+      "description": "**Tell Us why They Are Amazing?",
+      "agree": "You must agree to the terms and conditions"
+    }
+  },
+
+  "advertiseWithUs": {
+    "typeOfAd": "What Type of Ad",
+    "durationOfAdv": "Duration of Advertisement",
+    "addInfo": "Additional Information",
+    "name": "Full Name",
+    "email": "Email Address",
+    "country": "Country",
+    "agree": "You must agree to the terms and conditions",
+    "button": "Submit",
+    "companyName": "Company Name",
+    "robot": "I am not a Robot",
+    "subHeader": "Advertise With Us",
+    "whichIssue":"Which Issue"
+  },
+  "issue&solution": {
+    "title": "ISSUES AND SOLUTION",
+    "sub-title": "Do you have a solution to any issues Africa is experiencing ?",
+    "detail-title": " Issues Can be :",
+    "listHeader": {
+      "listHeader1": "Access to Basic Needs",
+      "listHeader2": "Quality of Life Enhancements",
+      "listHeader3": "Economic Challenges",
+      "listHeader4": "Social Equity and Governance",
+      "listHeader5": "Challenges in Modernization and Globalization"
+    },
+    "listData": {
+      "listData1": {
+        "listData1_1": "Water Scarcity and Quality",
+        "listData1_2": "Food Scarcity",
+        "listData1_3": "Healthcare Challenges"
+      },
+      "listData2": {
+        "listData2_1": "Education Quality and Access",
+        "listData2_2": "Housing and Urbanisation Challenges"
+      },
+      "listData3": {
+        "listData3_1": "Economic Dependence and Debt Burdence",
+        "listData3_2": "Trade Barriers and Economic Policies",
+        "listData3_3": "Climate Change and Environment Degradation",
+        "listData3_4": "Energy Access and Reliability"
+      },
+      "listData4": {
+        "listData4_1": "Gender Inequality and Social Exclusion",
+        "listData4_2": "Corruption and Poor Governance",
+        "listData4_3": "Weak Institutions and Security"
+      },
+      "listData5": {
+        "listData5_1": "Brain Drain and Cultural Tensions",
+        "listData5_2": "Lack of Infrastructure and Urbanization Challenges"
+      }
+    },
+    "subHeader": "Choose other topic if necessary",
+    "formHeader": "What is your soluction?",
+    "issues": "Issues Faced by Africa",
+    "solution": "Solutions",
+    "name": "Your Name",
+    "email": "Email Address",
+    "country": "Country",
+    "agree": "I agree to the terms and condition",
+    "button": "Send"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Your Name",
+    "email": "Email Address",
+    "mobileNo": "Mobile Number",
+    "subject": "Subject",
+    "message": "Message",
+    "button": "Submit"
+  },
+  "nomination": {
+    "title": "nomination",
+    "sub-title1": "Best Music Video Nomination",
+    "sub-title2": "Best Personality Nomination",
+    "sub-title3": "Best Enterpreneur Nomination",
+    "formHeader1": "Music Video Nomination",
+    "formHeader2": "Personality Nomination",
+    "formHeader3": "Enterpreneur Nomination",
+    "Nominee": "NOminee Name",
+    "country": "Country",
+    "name": "Your Name",
+    "button": "Submit"
+  },
+  "accounts": {
+    "title": "Reading platform from my account",
+    "title2": "Your Subscription",
+    "title3": "Other Issues"
+  },
+  "blogPostSlug": {
+    "title": "Leave a comment",
+    "email": "Email",
+    "comment": "Comment",
+    "send": "Send"
+  },
+  "login": {
+    "email": "Email",
+    "password": "Password",
+    "remember": "Remember Me",
+    "forgot": "Forgot Password?",
+    "login": "LOG IN",
+    "noPassword": "Don’t have an account? ",
+    "register": "Sign Up"
+  },
+  "register": {
+    "firstName": " First Name",
+    "middleName": "Middle Name",
+    "lastName": "Last Name",
+    "phoneNumber": "Phone Number",
+    "email": "Email",
+    "country": "Country",
+    "confirmPassword": "Confirm Password",
+    "password": "Password",
+    "agree": "Agree to terms and condition",
+    "login": "Login",
+    "haveAccount": "Have an account ?",
+    "signup": "SIGN UP"
+  },
+  "button": {
+    "read": "Read"
+  },
+  "carts": {
+    "header": "Carts",
+    "price": "Price",
+    "subtotal": "SubTotal",
+    "remove": "REMOVE FROM CART",
+    "order": "ORDER SUMMARY",
+    "shipping": "Shipping",
+    "total": "Total Amount",
+    "checkout": "Checkout",
+    "havent": "You Havent Shopped Yet",
+    "mode": "Mode"
+  },
+  "password": {
+    "password": "Reset Password"
+  },
+  "Footer": {
+    "footerLeft": {
+      "about": "About us",
+      "contact": "Contact Us",
+      "sign": "Sign Up"
+    },
+    "footerRight": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "policy": "Policies"
+    }
+  }
+}

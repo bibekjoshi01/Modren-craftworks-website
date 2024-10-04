@@ -1,0 +1,43 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.solutions {
+  max-width: $maxWidth;
+  padding: 0px 40px;
+
+  // Apply medium screen adjustments (for tablets)
+  @include md {
+    padding: 0 20px;
+  }
+
+  // Apply small screen adjustments (for mobile)
+  @include sm {
+    padding: 0 15px;
+  }
+
+  .cards {
+    @include flex(center, center, row, 40px);
+    padding: 20px 0;
+    flex-wrap: wrap;
+
+    & > * {
+      flex: 1 1 300px;
+    }
+
+    // On smaller devices, stack cards vertically
+    @include sm {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    // For medium screens (e.g., tablets), reduce gap and keep horizontal layout
+    @include md {
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .heading {
+      text-align: left;
+    }
+  }
+}

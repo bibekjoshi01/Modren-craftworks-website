@@ -1,0 +1,141 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.consultation {
+  position: relative;
+  max-width: $maxWidth;
+  margin: 4rem 0;
+  padding: 0px 40px;
+
+  // Apply medium screen adjustments (for tablets)
+  @include md {
+    padding: 0 20px;
+  }
+
+  // Apply small screen adjustments (for mobile)
+  @include sm {
+    padding: 0 15px;
+  }
+
+  .container {
+    margin-top: 150px;
+    @include flex(center, center, row, 80px);
+    position: relative;
+    flex-wrap: wrap;
+    padding: 2rem;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      145deg,
+      var(--primary-300),
+      var(--primary-900)
+    );
+    color: white;
+
+    @include md {
+      flex-direction: column;
+    }
+
+    @include sm {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @include xs {
+      gap: 1rem;
+    }
+
+    .text {
+      flex: 1;
+      width: 50%;
+    }
+
+    .textContainer {
+      flex: 1;
+      width: 50%;
+
+      @include sm {
+        text-align: center;
+        padding: 0 1rem;
+      }
+
+      .content {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: white;
+        font-family: Helvetica, sans-serif;
+        text-align: center;
+      }
+
+      .icons {
+        @include flex(center, center, row, 60px);
+        margin: 40px 0;
+
+        @include xs {
+          gap: 1rem;
+        }
+
+        img {
+          width: 80px;
+          height: 80px;
+
+          @include sm {
+            width: 30px;
+            height: 30px;
+          }
+
+          @include xs {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      // Button styles
+      button {
+        width: 100%;
+        color: white;
+        border-color: white;
+        margin-top: 1rem;
+
+        svg {
+          fill: white;
+        }
+
+        &:hover {
+          background-color: white;
+          color: var(--primary-900);
+
+          svg {
+            fill: var(--primary-900);
+          }
+        }
+
+        &::before {
+          all: unset;
+        }
+      }
+    }
+  }
+
+  .imageContainer {
+    position: absolute;
+    top: 500px;
+    left: 100px;
+    transform: translateY(-50%);
+    z-index: 1000;
+
+    .thumbnail {
+      width: 50rem;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 1s ease-in-out;
+      object-fit: contain;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

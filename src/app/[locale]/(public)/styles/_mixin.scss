@@ -1,0 +1,74 @@
+@import './variables';
+
+@mixin flex($align-items, $justify-content, $direction, $gap) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin position(
+  $position,
+  $top,
+  $bottom,
+  $left,
+  $right,
+  $translateX,
+  $translateY
+) {
+  position: $position;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+  transform: translate($translateX, $translateY);
+}
+
+@mixin font($font-family, $size, $weight) {
+  font-family: $font-family;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+// Extra small devices (mobile)
+@mixin xs {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+// Small devices (phones)
+@mixin sm {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+// Medium devices (tablets)
+@mixin md {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+// Large devices (small laptops)
+@mixin lg {
+  @media only screen and (max-width: 1366px) {
+    @content;
+  }
+}
+
+// Extra large devices (laptops, desktops)
+@mixin xl {
+  @media only screen and (max-width: 1920px) {
+    @content;
+  }
+}
+
+// Ultra large devices (large desktops)
+@mixin xxl {
+  @media only screen and (min-width: 1920px) {
+    @content;
+  }
+}

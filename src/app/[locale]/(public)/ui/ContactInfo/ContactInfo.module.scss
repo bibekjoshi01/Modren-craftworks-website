@@ -1,0 +1,55 @@
+@import '../../styles/variables';
+@import '../../styles/mixin';
+
+.card {
+  padding: 1.5rem;
+  background-color: transparent;
+  border-radius: 8px;
+  @include flex(center, center, column, 50px);
+
+  .contactDetails {
+    @include flex(flex-start, flex-start, column, 50px);
+    font-family: Helvetica, sans-serif;
+
+    p {
+      @include flex(center, flex-start, row, 20px);
+      font-size: 20px;
+      font-weight: 400;
+      color: #939393;
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .socialMediaIcons {
+    @include flex(center, center, row, 30px);
+
+    span {
+      cursor: pointer;
+      border: 2px solid var(--text-color-light);
+      border-radius: 50%;
+      padding: 10px;
+      height: 45px;
+      width: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s;
+
+      &:hover {
+        svg {
+          fill: #fff;
+        }
+
+        border-color: white;
+        background-image: linear-gradient(
+          90deg,
+          var(--primary-900),
+          var(--primary-300)
+        );
+      }
+    }
+  }
+}

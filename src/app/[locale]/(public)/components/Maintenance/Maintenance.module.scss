@@ -1,0 +1,81 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.solutions {
+  margin: 10rem auto;
+  max-width: $maxWidth;
+
+  .cards {
+    @include flex(center, center, row, 40px);
+    padding: 2rem 4rem;
+    flex-wrap: wrap;
+
+    // Ensures that each card takes up space evenly in a row (3 per row by default)
+    & > * {
+      flex: 1 1 calc((100% / 3) - 40px); // 3 elements in a row, subtracting the gap
+    }
+
+    // Small devices (larger phones and smaller screens)
+    @include xs {
+      flex-direction: column; // Stack cards vertically
+      padding: 15px;
+      gap: 2rem;
+      & > * {
+        flex: 1 1 100%; // Cards take full width on small screens
+      }
+    }
+
+    // Small devices (larger phones and smaller screens)
+    @include sm {
+      flex-direction: column; // Stack cards vertically
+      padding: 20px;
+      gap: 2rem;
+      & > * {
+        flex: 1 1 100%; // Cards take full width on small screens
+      }
+    }
+
+    // Medium devices (tablets)
+    @include md {
+      flex-direction: row;
+      gap: 1.6rem;
+      & > * {
+        flex: 1 1 calc((100% / 2) - 20px); // 2 cards per row on medium screens
+      }
+    }
+
+    // Large devices (small laptops)
+    @include lg {
+      flex-direction: row;
+      gap: 2rem;
+      & > * {
+        flex: 1 1 calc((100% / 3) - 40px); // 3 cards per row
+      }
+    }
+
+    // Extra large devices (large desktops)
+    @include xl {
+      gap: 2.4rem;
+      & > * {
+        flex: 1 1 calc((100% / 3) - 40px); // Maintain 3 cards per row for large screens
+      }
+    }
+
+    // Ultra large devices (large desktops, 1920px+)
+    @include xxl {
+      gap: 3rem;
+      & > * {
+        flex: 1 1 calc((100% / 4) - 40px); // 4 cards per row on very large screens
+      }
+    }
+
+    .button {
+      width: 100%;
+
+      // On small screens, ensure button remains full-width
+      @include sm {
+        justify-content: center;
+      }
+    }
+  }
+}
