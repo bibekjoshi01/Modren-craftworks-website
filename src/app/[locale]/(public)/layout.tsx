@@ -2,15 +2,13 @@ import './globals.css';
 import React from 'react';
 import { Metadata } from 'next';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
-import ReduxProvider from './Provider';
-import { ToastContainer } from 'react-toastify';
 import Header from './layout/Header';
 import Footer from './layout/Footer';
 import MobileHeader from './layout/MobileHeader';
 
 interface Props {
   children: React.ReactNode;
-  params: { locale: 'en' | 'fr' };
+  params: { locale: 'en' | 'ar' };
 }
 
 export const metadata: Metadata = {
@@ -24,13 +22,10 @@ const RootLayout: React.FC<Props> = ({ children, params: { locale } }) => {
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <ReduxProvider>
-        <Header />
-        <MobileHeader />
-        <ToastContainer />
-        {children}
-        <Footer />
-      </ReduxProvider>
+      <Header />
+      <MobileHeader />
+      {children}
+      <Footer />
     </NextIntlClientProvider>
   );
 };
