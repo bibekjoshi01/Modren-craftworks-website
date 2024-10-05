@@ -2,7 +2,7 @@
 @import '../../styles/variables';
 
 .outlinedBtn {
-  font-family: var(--roboto);
+  @include font(var(--roboto), 16px, 600);
   background-color: transparent;
   color: $primary-color;
   position: relative;
@@ -10,8 +10,6 @@
   outline: none;
   border-radius: 10px;
   border: 2px solid $primary-color;
-  font-weight: 600;
-  font-size: 16px;
   padding: 16px 24px;
   text-transform: uppercase;
   display: flex;

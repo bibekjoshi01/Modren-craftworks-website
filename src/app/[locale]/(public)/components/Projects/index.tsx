@@ -1,7 +1,7 @@
 import styles from './Projects.module.scss';
 
 import SectionTitle from '../../ui/SectionTitle';
-import Card from '../../ui/Card';
+import ProjectCard from './ProjectCard';
 
 const Projects = ({ Data }: any) => {
   return (
@@ -12,7 +12,7 @@ const Projects = ({ Data }: any) => {
       />
       <div className={styles.cards}>
         {Data.map((solution: any) => (
-          <Card
+          <ProjectCard
             key={solution.id}
             imageSrc={solution.imageSrc}
             heading={solution.heading}

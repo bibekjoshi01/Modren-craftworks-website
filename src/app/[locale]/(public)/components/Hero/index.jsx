@@ -6,6 +6,7 @@ import image2 from '../../assets/heroSectionImages/image2.png';
 import image3 from '../../assets/heroSectionImages/image3.png';
 import image4 from '../../assets/heroSectionImages/image4.png';
 import useTyped from '../../hooks/useTyped';
+import ArrowRightSVG from '../../ui/ArrowRightSVG';
 
 const Hero = () => {
   useTyped('#auto-type', {
@@ -33,18 +34,7 @@ const Hero = () => {
           </button>
           <button className={styles.outlinedBtn}>
             <span>Lets Talk</span>
-            <svg
-              width="21"
-              height="15"
-              viewBox="0 0 21 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M13.8633 14.5898L12.4383 13.1898L17.0383 8.58984H0.863281V6.58984H17.0383L12.4633 1.98984L13.8633 0.589844L20.8633 7.58984L13.8633 14.5898Z"
-                fill="#045161"
-              />
-            </svg>
+            <ArrowRightSVG />
           </button>
         </div>
         <div className={styles.features}>

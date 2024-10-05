@@ -6,6 +6,7 @@ import image1 from '../../assets/aboutSectionImages/image1.png';
 import image2 from '../../assets/aboutSectionImages/image2.png';
 import image3 from '../../assets/aboutSectionImages/image3.png';
 import useImageSlider from '../../hooks/useImageSlider';
+import ArrowRightSVG from '../../ui/ArrowRightSVG';
 
 const About = () => {
   const { image } = useImageSlider([image1, image2, image3], 1500);
@@ -71,18 +72,7 @@ const About = () => {
         <div>
           <button className={styles.outlinedBtn}>
             <span>Learn More</span>
-            <svg
-              width="21"
-              height="15"
-              viewBox="0 0 21 15"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M13.8633 14.5898L12.4383 13.1898L17.0383 8.58984H0.863281V6.58984H17.0383L12.4633 1.98984L13.8633 0.589844L20.8633 7.58984L13.8633 14.5898Z"
-                fill="#045161"
-              />
-            </svg>
+            <ArrowRightSVG />
           </button>
         </div>
       </div>
@@ -91,17 +81,3 @@ const About = () => {
 };
 
 export default About;
-
-function ArrowRightSVG() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="24px"
-      viewBox="0 -960 960 960"
-      width="24px"
-      fill="#e8eaed"
-    >
-      <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-    </svg>
-  );
-}

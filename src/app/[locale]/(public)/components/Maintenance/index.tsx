@@ -1,7 +1,7 @@
 import styles from './Maintenance.module.scss';
 
 import SectionTitle from '../../ui/SectionTitle';
-import Card from '../../ui/Card';
+import Card from '../Projects/ProjectCard';
 
 const Maintenance = ({ Data }: any) => {
   return (
