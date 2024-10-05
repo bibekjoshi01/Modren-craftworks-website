@@ -3,11 +3,10 @@
 
 .consultation {
   position: relative;
-  max-width: $maxWidth;
-  margin: 4rem 0;
   padding: 0px 40px;
-
-  // Apply medium screen adjustments (for tablets)
+  max-width: $maxWidth;
+  margin: 4rem auto;
+  
   @include md {
     padding: 0 20px;
   }

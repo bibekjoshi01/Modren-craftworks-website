@@ -4,6 +4,8 @@
 .products {
   margin: 10rem auto;
   max-width: $maxWidth;
+  padding: 0 40px;
+  font-family: $secondaryFont;
 
   .detail {
     font-family: Helvetica, sans-serif;
