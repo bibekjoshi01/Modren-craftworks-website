@@ -2,15 +2,13 @@
 @import '../../../styles/variables';
 
 .card {
-  @include flex(center, space-between, column, 20px);
+  @include flex(null, flex-start, column, 20px);
   background-color: transparent;
   border-radius: 20px;
   transition: background-color 0.2s ease;
   transition:
     transform 1s ease,
     box-shadow 1s ease;
-  height: 100%;
-  border: 1px solid black;
 
   &:hover {
     box-shadow: 0px 0px 4px 0px #6c6c6c2e;
@@ -27,27 +25,31 @@
   }
 
   .content {
-    @include flex(flex-start, space-between, column, 10px);
-    padding: 40px 20px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 30px 20px;
 
     .heading {
       font-family: var(--bukra-bold);
       font-size: 32px;
       color: var(--text-color);
-      text-align: left;
-      min-height: 50px;
+      margin-block: 10px;
 
       @include md {
         font-size: 25px;
       }
     }
 
+    .center {
+      text-align: center;
+    }
+
     .details {
       @include font(var(--helvetica), 20px, 400);
       color: $text-color-3;
-      margin: auto 0;
       line-height: 30px;
+      margin-bottom: 10px;
 
       @include md {
         font-size: 18px;
@@ -55,7 +57,6 @@
     }
 
     .button {
-      width: 100%;
       margin-top: auto;
 
       & > * {
@@ -64,5 +65,3 @@
     }
   }
 }
-
-

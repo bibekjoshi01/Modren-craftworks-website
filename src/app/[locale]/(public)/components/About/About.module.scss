@@ -101,21 +101,21 @@
       margin-top: 12px;
       padding: 1.5rem 4.5rem;
 
-      transition: background-color 1s ease;
+      transition: all 1s ease;
 
       svg {
         fill: $primary-color;
         position: relative;
         z-index: 1;
-
-        &:hover {
-          fill: white;
-        }
       }
 
       &:hover {
         background-image: $gradient-linear-full;
         color: white;
+        border-color: white;
+        svg {
+          fill: white;
+        }
       }
     }
   }

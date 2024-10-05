@@ -3,7 +3,7 @@ import Image from 'next/image';
 import ArrowRightSVG from '../../../ui/ArrowRightSVG';
 import { OutlinedBtn } from '../../../ui/Button';
 
-const MaintainanceCard = ({ imageSrc, heading, details }: any) => {
+const MaintenanceCard = ({ imageSrc, heading, details }: any) => {
   return (
     <div className={styles.card}>
       <Image
@@ -27,4 +27,4 @@ const MaintainanceCard = ({ imageSrc, heading, details }: any) => {
   );
 };
 
-export default MaintainanceCard;
+export default MaintenanceCard;

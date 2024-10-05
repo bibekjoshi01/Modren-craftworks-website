@@ -1,7 +1,7 @@
 import styles from './Maintenance.module.scss';
 
 import SectionTitle from '../../ui/SectionTitle';
-import MaintainanceCard from './MaintenanceCard';
+import MaintenanceCard from './Card';
 
 const Maintenance = ({ Data }: any) => {
   return (
@@ -12,7 +12,7 @@ const Maintenance = ({ Data }: any) => {
       />
       <div className={styles.cards}>
         {Data.map((solution: any) => (
-          <MaintainanceCard
+          <MaintenanceCard
             key={solution.id}
             imageSrc={solution.imageSrc}
             heading={solution.heading}

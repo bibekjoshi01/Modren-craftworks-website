@@ -27,7 +27,7 @@ export default function ContactInfo() {
   );
 }
 
-function LocationSVG() {
+export function LocationSVG() {
   return (
     <svg
       width="25"
@@ -48,7 +48,7 @@ function LocationSVG() {
   );
 }
 
-function MailSVG() {
+export function MailSVG() {
   return (
     <svg
       width="32"
@@ -73,7 +73,7 @@ function MailSVG() {
   );
 }
 
-function MobileSVG() {
+export function MobileSVG() {
   return (
     <svg
       width="30"
@@ -98,7 +98,7 @@ function MobileSVG() {
   );
 }
 
-function XSVG() {
+export function XSVG() {
   return (
     <svg
       width="23"
@@ -112,7 +112,7 @@ function XSVG() {
   );
 }
 
-function LinkedInSVG() {
+export function LinkedInSVG() {
   return (
     <svg
       width="19"

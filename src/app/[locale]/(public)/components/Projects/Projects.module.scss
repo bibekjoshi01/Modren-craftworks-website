@@ -3,8 +3,8 @@
 
 .solutions {
   max-width: $maxWidth;
-  margin: 0 auto;
-  padding: 10rem 40px;
+  margin: 10rem auto;
+  padding: 0 40px;
   font-family: $secondaryFont;
 
   @include md {
@@ -12,22 +12,56 @@
   }
 
   .cards {
-    @include flex(center, center, row, 40px);
+    @include flex(stretch, center, row, 40px);
     padding: 20px 0;
-    border: 1px solid red;
+    flex-wrap: wrap; // Ensures that cards wrap if they don't fit on one row
 
-    & > * {
-      flex: 1 1 300px;
-    }
-
-    @include sm {
-      flex-direction: column;
+    // Extra small devices (mobile)
+    @include xs {
+      flex-direction: column; // Stack cards vertically
       gap: 2rem;
     }
 
+    // Small devices (phones)
+    @include sm {
+      flex-direction: column; // Stack cards vertically for smaller phones
+      gap: 2rem;
+    }
+
+    // Medium devices (tablets)
     @include md {
+      flex-direction: row; // Display cards in a row
+      gap: 1rem;
+      & > * {
+        flex: 1 1 calc(50% - 1rem); // Make two cards fit in a row
+      }
+    }
+
+    // Large devices (small laptops)
+    @include lg {
       flex-direction: row;
       gap: 1rem;
+      & > * {
+        flex: 1 1 calc(33.33% - 1rem); // Make three cards fit in a row
+      }
+    }
+
+    // Extra large devices (laptops, desktops)
+    @include xl {
+      flex-direction: row;
+      gap: 1rem;
+      & > * {
+        flex: 1 1 calc(25% - 1rem); // Four cards in a row on larger screens
+      }
+    }
+
+    // Ultra large devices (large desktops)
+    @include xxl {
+      flex-direction: row;
+      gap: 1rem;
+      & > * {
+        flex: 1 1 calc(20% - 1rem); // Five cards in a row for ultra-large desktops
+      }
     }
   }
 }

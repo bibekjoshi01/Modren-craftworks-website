@@ -1,0 +1,164 @@
+@import '../styles/mixin';
+@import '../styles//variables';
+
+.footer {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  // Logo Styles
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      aspect-ratio: 2.5 / 1;
+
+      @include md {
+        max-width: 120px;
+      }
+
+      @include sm {
+        max-width: 100px;
+      }
+    }
+  }
+
+  .footerLinks {
+    @include flex(flex-start, center, row, 20px);
+    flex-wrap: wrap;
+
+    & > div {
+      flex: 1;
+    }
+
+    .linkGroup {
+      h4 {
+        color: $text-color-1;
+        @include font(var(--bukra-medium), 18px, 500);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+
+        @include md {
+          font-size: 16px;
+        }
+
+        @include sm {
+          font-size: 14px;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          cursor: pointer;
+          @include font(var(--bukra-medium), 18px, 500);
+          color: $text-color-5;
+          margin-bottom: 0.5rem;
+          transition: all 0.3s ease;
+          text-transform: capitalize;
+
+          @include md {
+            font-size: 16px;
+          }
+
+          @include sm {
+            font-size: 14px;
+          }
+
+          &:hover {
+            color: $text-color-2;
+          }
+        }
+      }
+    }
+
+    .contact {
+      h4 {
+        color: $text-color-1;
+        @include font(var(--bukra-medium), 18px, 400);
+        text-transform: uppercase;
+        @include md {
+          font-size: 16px;
+        }
+
+        @include sm {
+          font-size: 14px;
+        }
+      }
+
+      .contactDetails {
+        @include font(var(--bukra-medium), 18px, 500);
+        @include flex(flex-start, flex-start, column, null);
+        @include md {
+          font-size: 16px;
+        }
+
+        @include sm {
+          font-size: 14px;
+        }
+        p {
+          @include flex(center, flex-start, row, 20px);
+          color: $text-color-5;
+          @include md {
+            gap: 16px;
+          }
+        }
+      }
+
+      p {
+        margin-block: 1rem;
+      }
+
+      button {
+        @include flex(center, center, row, 15px);
+        margin-bottom: 30px;
+        width: 100%;
+      }
+
+      .socialMediaIcons {
+        @include flex(center, center, row, 30px);
+
+        span {
+          cursor: pointer;
+          border: 2px solid var(--text-color-light);
+          border-radius: 50%;
+          padding: 10px;
+          height: 45px;
+          width: 45px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: background-color 0.3s;
+
+          &:hover {
+            svg {
+              fill: #fff;
+            }
+
+            border-color: white;
+            background-image: $gradient-linear-full;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin: 20px;
+    text-align: center;
+    color: $text-color-5;
+    @include font(var(--roboto), 20px, 300);
+
+    @include md {
+      font-size: 18px;
+    }
+
+    @include sm {
+      font-size: 16px;
+    }
+  }
+}
