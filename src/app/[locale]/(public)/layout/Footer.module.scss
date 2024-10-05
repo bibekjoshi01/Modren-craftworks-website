@@ -8,11 +8,17 @@
 
   // Logo Styles
   .logo {
-    display: flex;
-    align-items: center;
+    margin-bottom: 20px;
+
+    @include md {
+      width: 100%;
+    }
 
     img {
       aspect-ratio: 2.5 / 1;
+      max-width: 250px;
+      height: auto;
+      margin-left: -20px;
 
       @include md {
         max-width: 120px;

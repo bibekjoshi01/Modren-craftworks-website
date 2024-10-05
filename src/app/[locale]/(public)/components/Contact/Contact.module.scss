@@ -10,12 +10,20 @@
     rgba(4, 81, 97, 0) 101.17%
   );
   padding: 40px 0px;
-  border-top-right-radius: 500px;
+  border-top-right-radius: 30rem;
+
+  @include md {
+    border-top-right-radius: 10rem;
+  }
 
   .container {
     max-width: 1920px;
     margin: 0 auto;
     padding: 2rem 0;
+
+    @include md {
+      padding: 0;
+    }
 
     .title {
       margin-bottom: 100px;
@@ -50,7 +58,13 @@
 
       @include md {
         flex-direction: column;
-        margin: 0 4rem;
+        margin: 0 20px;
+        padding: 40px;
+        gap: 20px;
+      }
+
+      @include xs {
+        padding: 20px;
       }
 
       form {
@@ -95,6 +109,11 @@
 
         button {
           margin-top: 50px;
+
+          @include md {
+            margin-top: 30px;
+          }
+
           width: 100%;
         }
       }

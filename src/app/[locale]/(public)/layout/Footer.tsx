@@ -133,8 +133,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.logo}>
-        Logo
-        {/* <Image priority={true} src={Logo} width={900} height={500} alt="Logo" /> */}
+        <Image priority={true} src={Logo} width={900} height={500} alt="Logo" />
       </div>
 
       <div className={styles.footerLinks}>
