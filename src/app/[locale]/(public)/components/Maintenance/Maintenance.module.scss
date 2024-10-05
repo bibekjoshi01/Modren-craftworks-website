@@ -4,12 +4,12 @@
 .solutions {
   max-width: $maxWidth;
   margin: 0 auto;
-  padding: 10rem 40px;
+  padding: 0 40px;
+  padding-bottom: 20px;
   font-family: $secondaryFont;
 
   .cards {
     @include flex(center, center, row, 40px);
-    padding: 20px 0;
 
     & > * {
       flex: 1 1 300px;

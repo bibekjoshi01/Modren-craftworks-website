@@ -3,10 +3,9 @@
 
 .solutions {
   max-width: $maxWidth;
-  margin: 10rem auto;
-  padding: 0 40px;
+  margin: 0 auto;
+  padding: 6rem 40px;
   font-family: $secondaryFont;
-
   @include md {
     padding: 0 20px;
   }

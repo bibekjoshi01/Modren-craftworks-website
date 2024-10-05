@@ -118,16 +118,12 @@
         outline: none;
         overflow: hidden;
 
-        transition:
-          background-color 0.5s ease,
-          color 0.25s ease;
-        will-change: background-color, color;
+        transition: background-color 0.5s ease
+        color 0.25s ease;
 
         &:hover {
-          background: $gradient-linear-full;
-          color: white; // Ensure text color remains white
-
-          transition: background 0.5s ease;
+          background-image: $gradient-linear-full;
+          color: white;
         }
 
         @include md {
@@ -292,7 +288,7 @@
     }
   }
 
-  @media (max-width: 1280px) {
+  @include md {
     flex-direction: column;
   }
 }
