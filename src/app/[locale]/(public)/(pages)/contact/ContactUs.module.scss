@@ -1,0 +1,195 @@
+@import '../../styles/mixin';
+@import '../../styles/variables';
+
+.contactUs {
+  min-height: 100vh;
+  background-image: $gradient-linear-full;
+  background-image: linear-gradient(
+    -122.74deg,
+    rgba(4, 81, 97, 0.5) -4.02%,
+    rgba(4, 81, 97, 0.3) 52.1%,
+    rgba(4, 81, 97, 0) 101.17%
+  );
+}
+
+.container {
+  @include flex(center, center, row, 60px);
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 10rem 40px;
+  font-family: $secondaryFont;
+
+  @include md {
+    flex-direction: column;
+  }
+}
+
+.contactContainer {
+  @include flex(null, null, column, 20px);
+  flex: 1;
+
+  h1 {
+    @include font(var(--HelveticaNeue), 44px, 500);
+    text-transform: uppercase;
+  }
+
+  p {
+    @include font(var(--helvetica), 18px, 400);
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+  }
+}
+
+.contactDetails {
+  margin-top: 15px;
+
+  @include font(var(--bukra-medium), 18px, 500);
+  @include flex(flex-start, flex-start, column, 20px);
+  @include md {
+    font-size: 16px;
+  }
+
+  @include sm {
+    font-size: 14px;
+  }
+
+  p {
+    @include flex(center, flex-start, row, 20px);
+    @include md {
+      gap: 16px;
+    }
+  }
+}
+
+.socialMediaIcons {
+  @include flex(center, flex-start, row, 30px);
+  margin-top: 15px;
+
+  span {
+    cursor: pointer;
+    border: 2px solid var(--text-color-light);
+    border-radius: 50%;
+    padding: 10px;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      svg {
+        fill: #fff;
+      }
+
+      border-color: white;
+      background-image: $gradient-linear-full;
+    }
+  }
+}
+
+.formContainer {
+  flex: 1;
+  background-color: white;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.2);
+
+  @include md {
+    width: 100%;
+    padding: 20px;
+  }
+  @include sm {
+    padding: 20px;
+  }
+}
+
+.form {
+  padding: 0 50px;
+
+  @include md {
+    padding: 0 20px;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  h2 {
+    @include font(var(--helvetica), 28px, 400);
+    letter-spacing: 1.5px;
+  }
+
+  input,
+  textarea {
+    font-family: var(--roboto);
+    width: 100%;
+    padding: 16px 20px;
+    margin-block: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    color: #000;
+
+    &:hover {
+      outline: 1px solid black;
+    }
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-family: var(--roboto);
+    font-weight: 300;
+    color: #ababab;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  button {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: $primary-color;
+    color: white;
+    @include font(var(--roboto), 20px, 600);
+    padding: clamp(0.6rem, 1.6vw + 0.2rem, 0.8rem);
+    display: flex;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: all 1s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: $gradient-linear-full;
+      z-index: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
