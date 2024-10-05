@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import styles from './Header.module.scss';
 import Logo from '../assets/images/logo.png';
 
@@ -38,6 +38,10 @@ export const menuLinks = [
 
 const Header = () => {
   const pathname = usePathname();
+  const router = useRouter();
+
+  // Extract the language (first path segment)
+  const language = pathname?.split('/')[1] || 'en';
 
   const removeLanguagePrefix = (path: string) => {
     const segments = path.split('/');
@@ -48,6 +52,12 @@ const Header = () => {
   };
 
   const cleanedPath = removeLanguagePrefix(pathname);
+
+  const handleLanguageSwitch = () => {
+    const newLanguage = language === 'en' ? 'ar' : 'en';
+    const newPath = `/${newLanguage}${removeLanguagePrefix(pathname)}`;
+    router.push(newPath); // Change the URL
+  };
 
   return (
     <header className={styles.header}>
@@ -65,14 +75,16 @@ const Header = () => {
             >
               <Link
                 className={`${cleanedPath === link.path ? styles.active : ''}`}
-                href={link.path}
+                href={`/${language}${link.path}`}
               >
                 {link.title}
               </Link>
             </li>
           ))}
         </ul>
-        <div className={styles.languageSwitch}>العربية</div>
+        <div className={styles.languageSwitch} onClick={handleLanguageSwitch}>
+          {language === 'en' ? 'العربية' : 'English'}
+        </div>
       </nav>
     </header>
   );

@@ -10,6 +10,15 @@
     rgba(4, 81, 97, 0.3) 52.1%,
     rgba(4, 81, 97, 0) 101.17%
   );
+
+  &.rtl {
+    background-image: linear-gradient(
+      122.74deg,
+      rgba(4, 81, 97, 0.5) -4.02%,
+      rgba(4, 81, 97, 0.3) 52.1%,
+      rgba(4, 81, 97, 0) 101.17%
+    );
+  }
 }
 
 .container {
@@ -185,6 +194,10 @@
 
     &:hover::before {
       opacity: 1;
+    }
+
+    .rtl {
+      transform: rotate(180deg); 
     }
 
     span {
