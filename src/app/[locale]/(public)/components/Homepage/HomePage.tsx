@@ -17,12 +17,12 @@ const HomePage = () => {
   return (
     <>
       <Hero />
-      {/* <About /> */}
-      {/* <Projects Data={productSolutionData} /> */}
-      {/* <Consultation /> */}
-      {/* <Product Data={productData} /> */}
-      {/* <Maintenance Data={maintainanceSolutionData} /> */}
-      {/* <ContactSection /> */}
+      <About />
+      <Projects Data={productSolutionData} />
+      <Consultation />
+      <Product Data={productData} />
+      <Maintenance Data={maintainanceSolutionData} />
+      <ContactSection />
     </>
   );
 };

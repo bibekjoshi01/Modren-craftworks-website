@@ -4,14 +4,14 @@
 .outlinedBtn {
   font-family: var(--roboto);
   background-color: transparent;
-  color: var(--primary-900);
+  color: $primary-color;
   position: relative;
   overflow: hidden;
   outline: none;
-  border-radius: 8px;
-  border: 2px solid var(--primary-900);
-  font-weight: 900;
-  font-size: 20px;
+  border-radius: 10px;
+  border: 2px solid $primary-color;
+  font-weight: 600;
+  font-size: 16px;
   padding: 16px 24px;
   text-transform: uppercase;
   display: flex;

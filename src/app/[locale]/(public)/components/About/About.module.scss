@@ -2,80 +2,120 @@
 @import '../../styles/variables';
 
 .about {
-  margin-top: 100px;
-  @include flex(center, center, row, 40px);
+  @include flex(center, center, row, 60px);
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 10rem 40px;
+  font-family: $secondaryFont;
 
-  @media screen and (max-width: 768px) {
+  @include md {
     flex-direction: column;
+    padding: 0 20px;
   }
 
   .left {
     flex-basis: 50%;
     flex-shrink: 0;
 
+    @include md {
+      width: 100%;
+    }
+
     img {
       display: block;
-      width: fit-content;
+      width: 100%;
+      max-height: 580px;
       aspect-ratio: 1/1;
-      border-radius: 8px;
+      object-fit: cover;
+      border-radius: 20px;
     }
   }
 
   .right {
-    flex-shrink: 6;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    @include flex(flex-start, center, column, 10px);
+    flex: 1;
+    height: 580px;
 
     .title {
-      font-family: $primaryFont;
-      font-size: 20px;
-      font-weight: 500;
-      color: var(--text-color-light);
-
-      @media screen and (max-width: 768px) {
-        text-align: center;
-      }
+      @include font(var(--HelveticaNeue), 20px, 500);
+      color: $text-color-4;
+      text-transform: uppercase;
     }
 
     .heading {
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin: 1rem 0;
-
+      @include font(var(--bukra-medium), 40px, 500);
+      color: $text-color-1;
+      @include flex(flex-start, center, null, 12px);
       text-wrap: wrap;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-
-      @media screen and (max-width: 1024px) {
-        flex-direction: column;
-      }
+      margin-top: 20px;
 
       img {
-        height: 5rem;
+        height: 7rem;
+        width: 16rem;
       }
 
       span {
-        color: var(--primary-900);
+        color: $primary-color;
+      }
+
+      svg {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation:
+          draw 5s ease forwards,
+          fadeIn 1s ease-in forwards;
+      }
+    }
+
+    @keyframes draw {
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
       }
     }
 
     .aboutText {
-      font-size: clamp(1.12rem, 4vw + 0.2rem, 1.32rem);
-      color: var(--text-color-light);
-      margin-block: 6rem 5rem;
-
-      @media screen and (max-width: 1024px) {
-        margin-block: 3rem 2rem;
-      }
+      @include font(var(--helvetica), 24px, 400);
+      color: $text-color-3;
+      margin: auto 0;
     }
 
-    button {
-      display: flex;
+    .outlinedBtn {
+      @include font(--var(roboto), 16px, 600);
+      @include flex(center, center, row, 15px);
+      background-color: transparent;
+      border: 2px solid $primary-color;
+      color: $primary-color;
+      outline: none;
+      border-radius: 10px;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 12px;
+      padding: 1.5rem 4.5rem;
 
-      @media screen and (max-width: 768px) {
-        width: 100%;
+      transition: background-color 1s ease;
+
+      svg {
+        fill: $primary-color;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+          fill: white;
+        }
+      }
+
+      &:hover {
+        background-image: $gradient-linear-full;
+        color: white;
       }
     }
   }

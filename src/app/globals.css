@@ -39,6 +39,7 @@ body {
 /* For WebKit-based browsers */
 ::-webkit-scrollbar {
   width: 5px; /* Adjust the width as needed */
+  display: none;
 }
 
 ::-webkit-scrollbar-thumb {
