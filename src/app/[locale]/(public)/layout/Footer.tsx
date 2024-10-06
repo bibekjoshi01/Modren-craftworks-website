@@ -37,14 +37,15 @@ const Footer = () => {
           <h4>{t('title')}</h4>
           <div className={styles.contactDetails}>
             <p>
-              <LocationSVG aria-hidden="true" />{' '}
+              <LocationSVG aria-hidden="true" />
               <span>{t('contact.location')}</span>
             </p>
             <p>
               <MailSVG aria-hidden="true" /> <span>{t('contact.email')}</span>
             </p>
             <p>
-              <MobileSVG aria-hidden="true" /> <span>{t('contact.phone')}</span>
+              <MobileSVG aria-hidden="true" />
+              <span dir="ltr">{t('contact.phone')}</span>
             </p>
           </div>
           <FilledBtn text={t('filledBtn')} svg={<ArrowRightSVG />} />

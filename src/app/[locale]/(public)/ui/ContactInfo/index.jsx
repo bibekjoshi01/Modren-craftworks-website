@@ -15,7 +15,7 @@ export default function ContactInfo() {
           <MailSVG aria-hidden="true" /> <span>{t('email')}</span>
         </p>
         <p>
-          <MobileSVG aria-hidden="true" /> <span>{t('phone')}</span>
+          <MobileSVG aria-hidden="true" /> <span dir="ltr">{t('phone')}</span>
         </p>
       </div>
 

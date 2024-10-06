@@ -72,8 +72,8 @@ const About = () => {
             <path
               d="M7 71C20.7557 66.5917 43.5559 61.1512 72 57.2232C100.48 53.2903 134.618 50.8737 171 52.528C191.491 53.4597 212.695 55.6827 234 59.6534"
               stroke="#045161"
-              stroke-width="5"
-              stroke-linecap="round"
+              strokeWidth="5"
+              strokeLinecap="round"
             />
           </svg>
         </h1>
