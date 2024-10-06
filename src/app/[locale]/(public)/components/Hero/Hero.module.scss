@@ -24,9 +24,27 @@
 
     .heading {
       @include font(var(--bukra-bold), 3.5rem, 700);
+    }
 
+    .animatedText {
+      font-size: 60px;
+      background-image: linear-gradient(
+        to right,
+        var(--primary-900),
+        var(--primary-300)
+      );
+      color: transparent;
+      background-clip: text;
+    }
+
+    .heading,
+    .animatedText {
       @include xl {
         font-size: 3.5rem;
+      }
+
+      @include lg {
+        font-size: 3.2rem;
       }
 
       @include md {
@@ -42,41 +60,14 @@
       }
     }
 
-    .animatedText {
-      font-size: 60px;
-      background-image: linear-gradient(
-        to right,
-        var(--primary-900),
-        var(--primary-300)
-      );
-      color: transparent;
-      background-clip: text;
-
-      @include xl {
-        font-size: 60px;
-      }
-
-      @include md {
-        font-size: 50px;
-      }
-
-      @include sm {
-        font-size: 40px;
-      }
-
-      @include xs {
-        font-size: 24px;
-      }
-    }
-
     .detailText {
       @include font(var(--bukra-medium), 24px, 500);
       margin-top: 30px;
       line-height: 1.5;
       color: $text-color-3;
 
-      @include xl {
-        font-size: 24pxpx;
+      @include lg {
+        font-size: 22px;
       }
 
       @include md {
@@ -118,8 +109,7 @@
         outline: none;
         overflow: hidden;
 
-        transition: background-color 0.5s ease
-        color 0.25s ease;
+        transition: background-color 0.5s ease color 0.25s ease;
 
         &:hover {
           background-image: $gradient-linear-full;

@@ -9,7 +9,6 @@
 
   .inner {
     margin-top: 150px;
-    @include flex(center, center, row, 80px);
     position: relative;
     flex-wrap: wrap;
     color: white;
@@ -19,14 +18,17 @@
 
     @include lg {
       gap: 20px;
+      @include flex(center, center, row, 80px);
     }
 
     @include md {
       flex-direction: column;
+      @include flex(center, center, row, 80px);
+      padding: 10rem 40px;
     }
 
     @include sm {
-      flex-direction: column;
+      padding: 10rem 20x;
       gap: 2rem;
     }
 
@@ -38,7 +40,6 @@
       flex: 1;
       width: 50%;
 
-      // NOTE : This is the media query for extra small devices
       @include lg {
         width: 0%;
         flex: unset;
@@ -46,8 +47,13 @@
     }
 
     .textContainer {
-      flex: 1;
+      margin-left: auto;
       width: 40%;
+      padding-right: 40px;
+
+      @include md {
+        padding-right: 0;
+      }
 
       @include lg {
         width: 100%;
@@ -56,15 +62,21 @@
       @include sm {
         text-align: center;
         padding: 0 1rem;
+        margin: 0;
       }
 
       .content {
-        font-size: 24px;
-        font-weight: 400;
+        @include font(var(--helvetica), 24px, 400);
         line-height: 1.2;
         color: white;
-        font-family: Helvetica, sans-serif;
         text-align: center;
+
+        @include md {
+          font-size: 20px;
+        }
+        @include md {
+          font-size: 18px;
+        }
       }
 
       .icons {
@@ -78,6 +90,15 @@
         img {
           width: 80px;
           height: 80px;
+
+          @include md {
+            width: 60px;
+            height: 60px;
+          }
+          @include sm {
+            width: 50px;
+            height: 50px;
+          }
         }
       }
 
@@ -109,6 +130,8 @@
   }
 
   .imageContainer {
+    margin: 0 auto;
+    width: 100%;
     position: absolute;
     max-width: 800px;
     left: 25%;
@@ -137,7 +160,7 @@
       border-radius: 16px;
       box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
       transition: transform 1s ease-in-out;
-      object-fit: contain;
+      background-size: cover;
 
       &:hover {
         transform: scale(1.05);

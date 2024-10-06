@@ -10,7 +10,11 @@
 
   @include md {
     flex-direction: column;
-    padding: 0 20px;
+    padding: 10rem 20px;
+  }
+
+  @include sm {
+    padding: 5rem 20px;
   }
 
   .left {
@@ -28,6 +32,10 @@
       aspect-ratio: 1/1;
       object-fit: cover;
       border-radius: 20px;
+
+      @include sm {
+        max-height: 300px;
+      }
     }
   }
 
@@ -36,10 +44,19 @@
     flex: 1;
     height: 580px;
 
+    @include sm {
+      padding: 10px;
+      height: auto;
+    }
+
     .title {
       @include font(var(--HelveticaNeue), 20px, 500);
       color: $text-color-4;
       text-transform: uppercase;
+
+      @include sm {
+        font-size: 16px;
+      }
     }
 
     .heading {
@@ -49,9 +66,20 @@
       text-wrap: wrap;
       margin-top: 20px;
 
+      @include sm {
+        @include flex(flex-start, center, column, null);
+        font-size: 30px;
+        margin-top: 10px;
+      }
+
       img {
         height: 7rem;
         width: 16rem;
+
+        @include sm {
+          height: 5rem;
+          width: 12rem;
+        }
       }
 
       span {
@@ -67,29 +95,18 @@
       }
     }
 
-    @keyframes draw {
-      100% {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
     .aboutText {
       @include font(var(--helvetica), 24px, 400);
       color: $text-color-3;
       margin: auto 0;
+
+      @include sm {
+        font-size: 18px;
+      }
     }
 
     .outlinedBtn {
-      @include font(--var(roboto), 16px, 600);
+      @include font(var(--roboto), 16px, 600);
       @include flex(center, center, row, 15px);
       background-color: transparent;
       border: 2px solid $primary-color;
@@ -100,6 +117,11 @@
       cursor: pointer;
       margin-top: 12px;
       padding: 1.5rem 4.5rem;
+
+      @include sm {
+        padding: 1rem 3rem;
+        font-size: 14px;
+      }
 
       transition: all 1s ease;
 
@@ -117,6 +139,21 @@
           fill: white;
         }
       }
+    }
+  }
+
+  @keyframes draw {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }

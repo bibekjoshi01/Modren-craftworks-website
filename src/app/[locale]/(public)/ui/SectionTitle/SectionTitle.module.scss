@@ -9,28 +9,39 @@
   h4 {
     font-size: 20px;
     font-weight: 500;
-    color: #939393;
+    color: $text-color-4;
+    text-align: center;
   }
 
   .heading {
+    @include flex(center, center, column, null);
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
     h1 {
+      @include font(var(--HelveticaNeue), 50px, 400);
       text-align: center;
-      color: var(--text-color);
-      font-weight: 400;
-      font-size: 50px;
+      color: $text-color-1;
       position: relative;
       z-index: 2;
       max-width: 1000px;
+
+      @include md {
+        font-size: 40px;
+      }
+      @include sm {
+        font-size: 30px;
+      }
     }
 
     .line {
       position: absolute;
       bottom: 10px;
+      @include md {
+        bottom: 5px;
+      }
+      @include sm {
+        bottom: 0px;
+      }
       width: 100%;
       height: 18px;
       background: #2cb4c647;

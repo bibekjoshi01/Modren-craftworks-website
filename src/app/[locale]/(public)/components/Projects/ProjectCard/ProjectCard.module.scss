@@ -5,6 +5,7 @@
   @include flex(null, flex-start, column, 20px);
   background-color: transparent;
   border-radius: 20px;
+  min-width: 300px;
   transition: background-color 0.2s ease;
   transition:
     transform 1s ease,

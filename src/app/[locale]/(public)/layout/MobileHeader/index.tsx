@@ -1,7 +1,8 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { getMenuLinks } from '../menuLinks';
 import { RxHamburgerMenu } from 'react-icons/rx';
@@ -11,13 +12,58 @@ import Logo from '../../assets/images/logo.png';
 
 const MobileHeader = () => {
   const t = useTranslations();
+  const pathname = usePathname();
+  const router = useRouter();
   const [activeSidebar, setActiveSidebar] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState('');
 
   // Get the translated menu links
   const menuLinks = getMenuLinks(t);
 
   const handleShowHideSideBar = () => {
     setActiveSidebar(!activeSidebar);
+  };
+
+  // Extract the language (first path segment)
+  const language = pathname.split('/')[1] || 'en';
+
+  useEffect(() => {
+    const getCookie = (name: string) => {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+
+      if (parts.length === 2) {
+        return parts.pop()?.split(';').shift();
+      }
+      return null;
+    };
+
+    // Retrieve the value of the cookie
+    const cookieValue = getCookie('NEXT_LOCALE');
+
+    if (cookieValue) {
+      setSelectedLanguage(cookieValue);
+
+      // Redirect if the current language does not match the cookie value
+      if (cookieValue !== language) {
+        const newPath = pathname.replace(`/${language}`, `/${cookieValue}`);
+        router.replace(newPath);
+      }
+    } else {
+      setSelectedLanguage(language);
+      router.push(`/${selectedLanguage}`);
+    }
+  }, [language, pathname, router, selectedLanguage]);
+
+  const handleLanguageSwitch = () => {
+    const newLanguage = language === 'en' ? 'ar' : 'en';
+
+    // Set the cookie
+    document.cookie = `NEXT_LOCALE=${newLanguage}; path=/`;
+
+    // Construct the new path
+    const newPath = pathname.replace(`/${language}`, `/${newLanguage}`);
+    router.push(newPath); // Change the URL
   };
 
   return (
@@ -61,6 +107,9 @@ const MobileHeader = () => {
               </li>
             ))}
           </ul>
+          <div className={styles.languageSwitch} onClick={handleLanguageSwitch}>
+            {language === 'en' ? 'العربية' : 'English'}
+          </div>
         </div>
       </div>
     </header>

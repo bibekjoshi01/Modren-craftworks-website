@@ -19,14 +19,6 @@
       max-width: 250px;
       height: auto;
       margin-left: -20px;
-
-      @include md {
-        max-width: 120px;
-      }
-
-      @include sm {
-        max-width: 100px;
-      }
     }
   }
 
@@ -83,6 +75,11 @@
     }
 
     .contact {
+      @include sm {
+        flex-basis: 100%;
+        margin-top: 2rem; 
+      }
+
       h4 {
         color: $text-color-1;
         @include font(var(--bukra-medium), 18px, 400);
