@@ -1,15 +1,20 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { getMenuLinks } from '../menuLinks';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoClose } from 'react-icons/io5';
-import Link from 'next/link';
 import styles from './MobileHeader.module.scss';
-import { menuLinks } from '../Header';
 import Logo from '../../assets/images/logo.png';
 
 const MobileHeader = () => {
+  const t = useTranslations();
   const [activeSidebar, setActiveSidebar] = useState(false);
+
+  // Get the translated menu links
+  const menuLinks = getMenuLinks(t);
 
   const handleShowHideSideBar = () => {
     setActiveSidebar(!activeSidebar);

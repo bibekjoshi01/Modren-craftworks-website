@@ -1,23 +1,33 @@
+'use client';
 import styles from './Contact.module.scss';
 import { FilledBtn } from '../../ui/Button';
 import ContactInfo from '../../ui/ContactInfo';
+import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import ArrowRightSVG from '../../ui/ArrowRightSVG';
 
 const ContactSection = () => {
+  const t = useTranslations('home.contact');
+  const pathname = usePathname();
+
+  // Extract the language (first path segment)
+  const language = pathname?.split('/')[1] || 'en';
+
   return (
-    <div className={styles.contact}>
+    <div className={styles.contact} dir={language == 'ar' ? 'rtl' : 'ltr'}>
       <div className={styles.container}>
         <div className={styles.title}>
-          <h4>Contact</h4>
-          <h1>Your Solution Starts Here!</h1>
+          <h4>{t('title')}</h4>
+          <h1>{t('description')}</h1>
         </div>
 
         <div className={styles.contactForm}>
           <form>
-            <h2>Let&rsquo;s Talk!</h2>
-            <input type="text" placeholder="Full Name" />
-            <input type="email" placeholder="Email" />
-            <textarea rows={6} placeholder="Type your message.."></textarea>
-            <FilledBtn text="SEND" svg={<ArrowRightSVG />} />
+            <h2>{t('form.title')}</h2>
+            <input type="text" placeholder={t('form.fullName')} />
+            <input type="email" placeholder={t('form.email')} />
+            <textarea rows={6} placeholder={t('form.message')}></textarea>
+            <FilledBtn text={t('form.submit')} svg={<ArrowRightSVG />} />
           </form>
           <div className={styles.contactInfo}>
             <ContactInfo />
@@ -29,19 +39,3 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-
-function ArrowRightSVG() {
-  return (
-    <>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        height="24px"
-        viewBox="0 -960 960 960"
-        width="24px"
-        fill="#e8eaed"
-      >
-        <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-      </svg>
-    </>
-  );
-}

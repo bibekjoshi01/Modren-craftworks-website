@@ -83,8 +83,7 @@
 
   // Language Switch Button
   .languageSwitch {
-    font-size: 18px;
-    font-weight: bold;
+    @include font(var(--helvetica), 18px, bold);
     color: $secondary-color;
     cursor: pointer;
     margin-left: 1rem;

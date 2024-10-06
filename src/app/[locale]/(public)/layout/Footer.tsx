@@ -1,9 +1,12 @@
+'use client';
 import Image from 'next/image';
 import React from 'react';
+import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import styles from './Footer.module.scss';
 import ArrowRightSVG from '../ui/ArrowRightSVG';
 import Logo from '../assets/images/logo.png';
-import ContactInfo, {
+import {
   LinkedInSVG,
   LocationSVG,
   MailSVG,
@@ -11,127 +14,19 @@ import ContactInfo, {
   XSVG,
 } from '../ui/ContactInfo';
 import { FilledBtn } from '../ui/Button';
-
-const FooterData = [
-  {
-    id: 1,
-    title: 'PRODUCTS',
-    links: [
-      {
-        link: 'Laboratories supplies',
-        to: '',
-      },
-      {
-        link: 'Refrigerators & freezers',
-        to: '',
-      },
-      {
-        link: 'Chemical Supplies',
-        to: '',
-      },
-      {
-        link: 'Safety Supplies',
-        to: '',
-      },
-      {
-        link: 'Laboratory Equipment',
-        to: '',
-      },
-      {
-        link: 'Monitoring Systems',
-        to: '',
-      },
-      {
-        link: 'Lab & Cleanroom Furniture',
-        to: '',
-      },
-      {
-        link: 'Life Science',
-        to: '',
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: 'PROJECTS',
-    links: [
-      {
-        link: 'Laboratories',
-        to: '',
-      },
-      {
-        link: 'Clean Room',
-        to: '',
-      },
-      {
-        link: 'Refrigerator & Freezer Room',
-        to: '',
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: 'MAINTENANCE',
-    links: [
-      {
-        link: 'Maintenance',
-        to: '',
-      },
-      {
-        link: 'Calibration',
-        to: '',
-      },
-      {
-        link: 'Testing',
-        to: '',
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: 'CONSULTATION',
-    links: [
-      {
-        link: 'Consultancy & Advisory Services',
-        to: '',
-      },
-      {
-        link: 'Calibration',
-        to: '',
-      },
-      {
-        link: 'Testing',
-        to: '',
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: 'ABOUT',
-    links: [
-      {
-        link: 'About Us',
-        to: '',
-      },
-      {
-        link: 'Our Story',
-        to: '',
-      },
-      {
-        link: 'Our Vision',
-        to: '',
-      },
-      {
-        link: 'Our Objectives',
-        to: '',
-      },
-    ],
-  },
-];
+import { getFooterData } from './footerData';
 
 const Footer = () => {
+  const t = useTranslations('footer');
+  const pathname = usePathname();
+
+  // Extract the language (first path segment)
+  const language = pathname?.split('/')[1] || 'en';
+
+  const FooterData = getFooterData(t);
+
   return (
-    <div className={styles.footer}>
+    <div className={styles.footer} dir={language == 'ar' ? 'rtl' : 'ltr'}>
       <div className={styles.logo}>
         <Image priority={true} src={Logo} width={900} height={500} alt="Logo" />
       </div>
@@ -139,23 +34,23 @@ const Footer = () => {
       <div className={styles.footerLinks}>
         <Links FooterData={FooterData} />
         <div className={styles.contact}>
-          <h4>CONTACT US</h4>
+          <h4>{t('title')}</h4>
           <div className={styles.contactDetails}>
             <p>
               <LocationSVG aria-hidden="true" />{' '}
-              <span>Riyadh, Saudi Arabia</span>
+              <span>{t('contact.location')}</span>
             </p>
             <p>
-              <MailSVG aria-hidden="true" /> <span>info@emkaan.sa</span>
+              <MailSVG aria-hidden="true" /> <span>{t('contact.email')}</span>
             </p>
             <p>
-              <MobileSVG aria-hidden="true" /> <span>+966 500487676</span>
+              <MobileSVG aria-hidden="true" /> <span>{t('contact.phone')}</span>
             </p>
           </div>
-          <FilledBtn text="LETS TALK" svg={<ArrowRightSVG />} />
+          <FilledBtn text={t('filledBtn')} svg={<ArrowRightSVG />} />
           <div
             className={styles.socialMediaIcons}
-            aria-label="Social Media Links"
+            aria-label={t('contact.socialMedia')}
           >
             <span aria-hidden="true">
               <LinkedInSVG />
@@ -167,7 +62,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className={styles.copyright}>Copyright © EMKAAN 2024</div>
+      <div className={styles.copyright}>{t('copyright')}</div>
     </div>
   );
 };

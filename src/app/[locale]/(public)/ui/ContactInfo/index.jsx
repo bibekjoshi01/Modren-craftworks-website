@@ -1,21 +1,25 @@
+'use client';
 import styles from './ContactInfo.module.scss';
+import { useTranslations } from 'next-intl';
 
 export default function ContactInfo() {
+  const t = useTranslations('home.contact');
+
   return (
     <div className={styles.card}>
       <div className={styles.contactDetails}>
         <p>
-          <LocationSVG aria-hidden="true" /> <span>Riyadh, Saudi Arabia</span>
+          <LocationSVG aria-hidden="true" /> <span>{t('location')}</span>
         </p>
         <p>
-          <MailSVG aria-hidden="true" /> <span>info@emkaan.sa</span>
+          <MailSVG aria-hidden="true" /> <span>{t('email')}</span>
         </p>
         <p>
-          <MobileSVG aria-hidden="true" /> <span>+966 500487676</span>
+          <MobileSVG aria-hidden="true" /> <span>{t('phone')}</span>
         </p>
       </div>
 
-      <div className={styles.socialMediaIcons} aria-label="Social Media Links">
+      <div className={styles.socialMediaIcons} aria-label={t('socialMedia')}>
         <span aria-hidden="true">
           <LinkedInSVG />
         </span>

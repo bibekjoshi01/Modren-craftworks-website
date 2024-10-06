@@ -1,26 +1,29 @@
-import styles from './ProjectCard.module.scss';
+'use client';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import styles from './ProjectCard.module.scss';
 import { OutlinedBtn } from '../../../ui/Button';
 import ArrowRightSVG from '../../../ui/ArrowRightSVG';
 
-const ProjectCard = ({ imageSrc, heading, details }: any) => {
+const ProjectCard = ({ data }: any) => {
+  const t = useTranslations('home.project');
+
   return (
     <div className={styles.card}>
       <Image
         className={styles.image}
-        src={imageSrc}
+        src={data?.imageSrc}
         alt="solution image"
         width={300}
         height={200}
-        objectFit="cover"
       />
       <div className={styles.content}>
-        <h1 className={`${styles.heading} ${!details && styles.center}`}>
-          {heading}
+        <h1 className={`${styles.heading} ${!data?.details && styles.center}`}>
+          {data?.heading}
         </h1>
-        {details && <p className={styles.details}>{details}</p>}
+        {data?.details && <p className={styles.details}>{data?.details}</p>}
         <div className={styles.button}>
-          <OutlinedBtn text="Learn More" svg={<ArrowRightSVG />} />
+          <OutlinedBtn text={t('outlinedBtn')} svg={<ArrowRightSVG />} />
         </div>
       </div>
     </div>

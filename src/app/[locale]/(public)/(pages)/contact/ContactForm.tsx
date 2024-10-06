@@ -44,7 +44,7 @@ const ContactForm = () => {
           </div>
           <div
             className={styles.socialMediaIcons}
-            aria-label={t('social_media')}
+            aria-label={t('socialMedia')}
           >
             <span aria-hidden="true">
               <LinkedInSVG />

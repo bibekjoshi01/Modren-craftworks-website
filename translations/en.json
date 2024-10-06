@@ -1,11 +1,92 @@
 {
+  "menu": {
+    "home": "Home",
+    "projects": "Projects",
+    "products": "Products",
+    "consultation": "Consultation",
+    "maintenanceAndService": "Maintenance and Service",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "footer": {
+    "title": "CONTACT US",
+    "copyright": "Copyright © EMKAAN 2024",
+    "filledBtn": "Lets Talk",
+    "contact": {
+      "location": "Riyadh, Saudi Arabia",
+      "email": "info@emkaan.sa",
+      "phone": "+966 500487676",
+      "socialMedia": "Social Media Links"
+    },
+    "menu": {
+      "projects": "Projects",
+      "products": "Products",
+      "consultation": "Consultation",
+      "maintenance": "Maintenance",
+      "about": "About"
+    }
+  },
+  "home": {
+    "hero": {
+      "heading": "Your Trusted Partner In",
+      "animatedText": "Laboratory Solution, CleanRoom Solution",
+      "detailText": "Turnkey Lab & Clean Room Experts/Design, Build, Accredit Your World-Class Lab.",
+      "filledBtn": "Learn More",
+      "outlinedBtn": "Lets Talk",
+      "features": "Discover, Collaborate, Unravel"
+    },
+    "about": {
+      "title": "ABOUT",
+      "heading": "Get Started With",
+      "aboutText": "Emkaan Medical Company was established in Riyadh, KSA on solid grounds and is considered as an extension of the knowledge and expertise obtained by Scientific Diamond Company which was originally established in 2015 in KSA and UAE.",
+      "outlinedBtn": "Learn More"
+    },
+    "project": {
+      "title": "PROJECTS SOULUTION",
+      "subtitle": "Reliable Results, Trusted Care",
+      "outlinedBtn": "Learn More"
+    },
+    "consultation": {
+      "title": "CONSULTATION",
+      "subtitle": "Expert Consultation for Your Laboratory & Cleanroom Needs",
+      "outlinedBtn": "Learn More",
+      "content": "With over two decades of combined expertise, Emkaan is your trusted partner in achieving ISO certification for laboratories and cleanrooms. We streamline the certification process, providing expert guidance and support every step of the way. Let us turn your ISO goals into reality."
+    },
+    "products": {
+      "title": "PRODUCTS",
+      "subtitle": "Solutions For Healthier Tomorrow",
+      "outlinedBtn": "Learn More",
+      "detail": "Emkaan Provide integrated solutions to cover almost every need in any kind of a laboratory, cooperating with the world&rsquo;s producer"
+    },
+    "maintenance": {
+      "title": "MAINTENANCE AND SERVICE SOLUTIONS",
+      "subtitle": "Leading the Way in Medical Solutions",
+      "outlinedBtn": "Learn More",
+      "detail": "Emkaan Provide integrated solutions to cover almost every need in any kind of a laboratory, cooperating with the world&rsquo;s producer"
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Your Solution Starts Here!",
+      "location": "Riyadh, Saudi Arabia",
+      "email": "info@emkaan.sa",
+      "phone": "+966 500487676",
+      "socialMedia": "Social Media Links",
+      "form": {
+        "title": "Let’s Talk!",
+        "fullName": "Full Name",
+        "email": "Email",
+        "message": "Type your message..",
+        "submit": "Send"
+      }
+    }
+  },
   "contact": {
     "title": "Contact",
     "description": "We Believe In Conversations. Whether You Have A Business Proposition, A Query, Or Simply Wish To Learn More About What We Do, Our Doors (And Inboxes) Are Always Open. With A Team Of Dedicated Professionals Ready To Assist, Your Inquiries Are Always In Expert Hands.",
     "location": "Riyadh, Saudi Arabia",
     "email": "info@emkaan.sa",
     "phone": "+966 500487676",
-    "social_media": "Social Media Links",
+    "socialMedia": "Social Media Links",
     "form": {
       "title": "Let’s Talk!",
       "full_name": "Full Name",

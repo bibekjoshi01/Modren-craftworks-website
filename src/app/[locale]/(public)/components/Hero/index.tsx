@@ -1,5 +1,9 @@
 'use client';
+import React from 'react';
+import { MouseEvent } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { useRouter, usePathname } from 'next/navigation';
 import styles from './Hero.module.scss';
 import image1 from '../../assets/heroSectionImages/image1.png';
 import image2 from '../../assets/heroSectionImages/image2.png';
@@ -9,46 +13,64 @@ import useTyped from '../../hooks/useTyped';
 import ArrowRightSVG from '../../ui/ArrowRightSVG';
 
 const Hero = () => {
+  const t = useTranslations('home.hero');
+
+  // Split the string into an array
+  const animatedText = t('animatedText').split(',');
+  const features = t('features').split(',');
+  const detailText = t('detailText').split('/');
+
   useTyped('#auto-type', {
-    strings: ['Laboratory Solution', 'CleanRoom Solution'],
+    strings: animatedText,
     typeSpeed: 150,
     backSpeed: 150,
     loop: true,
   });
 
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Extract the language (first path segment)
+  const language = pathname?.split('/')[1] || 'en';
+
+  const handleClick = (e: MouseEvent<HTMLButtonElement>, href: string) => {
+    e.preventDefault();
+    router.push(href);
+  };
+
   return (
-    <div className={styles.hero}>
+    <div className={styles.hero} dir={language == 'ar' ? 'rtl' : 'ltr'}>
       <div className={styles.left}>
-        <h1 className={styles.heading}>Your Trusted Partner In</h1>
+        <h1 className={styles.heading}>{t('heading')}</h1>
         <h2>
           <span id="auto-type" className={styles.animatedText}></span>
         </h2>
-        <p className={styles.deatiltext}>
-          Turnkey Lab & Clean Room Experts
+        <p className={styles.detailText}>
+          {detailText[0]}
           <br />
-          Design, Build, Accredit Your World-Class Lab.
+          {detailText[1]}
         </p>
         <div className={styles.buttons}>
           <button className={styles.filledBtn}>
-            <span>Learn More</span>
+            <span>{t('filledBtn')}</span>
           </button>
           <button className={styles.outlinedBtn}>
-            <span>Lets Talk</span>
+            <span>{t('outlinedBtn')}</span>
             <ArrowRightSVG />
           </button>
         </div>
         <div className={styles.features}>
           <div className={styles.feature}>
             <SearchIcon />
-            <span>Discover</span>
+            <span>{features[0]}</span>
           </div>
           <div className={styles.feature}>
             <CollaborateIcon />
-            <span>Collaborate</span>
+            <span>{features[1]}</span>
           </div>
           <div className={styles.feature}>
             <UnveilIcon />
-            <span>Unravel</span>
+            <span>{features[2]}</span>
           </div>
         </div>
       </div>

@@ -1,47 +1,21 @@
 'use client';
-
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.scss';
 import Logo from '../assets/images/logo.png';
-
-export const menuLinks = [
-  {
-    title: 'Home',
-    path: '',
-  },
-  {
-    title: 'Projects',
-    path: '/projects',
-  },
-  {
-    title: 'Products',
-    path: '/products',
-  },
-  {
-    title: 'Consultation',
-    path: '/consultation',
-  },
-  {
-    title: 'Maintenance and Service',
-    path: '/maintenance-and-service',
-  },
-  {
-    title: 'About',
-    path: '/about',
-  },
-  {
-    title: 'Contact',
-    path: '/contact',
-  },
-];
+import { getMenuLinks } from './menuLinks';
 
 const Header = () => {
+  const t = useTranslations();
   const pathname = usePathname();
   const router = useRouter();
   const [selectedLanguage, setSelectedLanguage] = useState('');
+
+  // Get the translated menu links
+  const menuLinks = getMenuLinks(t);
 
   // Extract the language (first path segment)
   const language = pathname.split('/')[1] || 'en';
@@ -72,7 +46,7 @@ const Header = () => {
       setSelectedLanguage(language);
       router.push(`/${selectedLanguage}`);
     }
-  }, [language, pathname, router]);
+  }, [language, pathname, router, selectedLanguage]);
 
   const handleLanguageSwitch = () => {
     const newLanguage = language === 'en' ? 'ar' : 'en';
@@ -86,7 +60,10 @@ const Header = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header
+      className={styles.header}
+      dir={selectedLanguage == 'ar' ? 'rtl' : 'ltr'}
+    >
       <div className={styles.logo}>
         <Image priority src={Logo} width={900} height={500} alt="Logo" />
       </div>
