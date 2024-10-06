@@ -70,7 +70,7 @@ const Header = () => {
       <nav className={styles.nav}>
         <ul className={styles.navLinks}>
           {menuLinks.map((link, index) => {
-            const strippedPath = pathname.split('/').slice(2).join('/'); 
+            const strippedPath = pathname.split('/').slice(2).join('/');
             const linkPath = link.path.replace(/^\//, '');
 
             return (
