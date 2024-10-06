@@ -69,17 +69,28 @@ const Header = () => {
       </div>
       <nav className={styles.nav}>
         <ul className={styles.navLinks}>
-          {menuLinks.map((link, index) => (
-            <li
-              key={index}
-              className={`${styles.links} ${
-                link.path === pathname ? styles.active : ''
-              }`}
-            >
-              <Link href={`/${language}${link.path}`}>{link.title}</Link>
-            </li>
-          ))}
+          {menuLinks.map((link, index) => {
+            const strippedPath = pathname.split('/').slice(2).join('/'); 
+            const linkPath = link.path.replace(/^\//, '');
+
+            return (
+              <li
+                key={index}
+                className={`${styles.links} ${
+                  strippedPath === linkPath ? styles.active : ''
+                }`}
+              >
+                <Link
+                  href={`/${language}${link.path}`}
+                  className={strippedPath == linkPath ? styles.active : ''}
+                >
+                  {link.title}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
+
         <div className={styles.languageSwitch} onClick={handleLanguageSwitch}>
           {language === 'en' ? 'العربية' : 'English'}
         </div>
