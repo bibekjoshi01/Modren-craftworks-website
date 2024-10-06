@@ -15,8 +15,13 @@ const nextConfig = {
         hostname: 'flagcdn.com',
       },
       {
+        protocol: 'http',
+        hostname: '127.0.0.1',
+        port: '8000', 
+      },
+      {
         protocol: 'https',
-        hostname: 'api-stars-of-africa.merakitechs.com',
+        hostname: 'emkaan.merakitechs.com',
       },
     ],
   },

@@ -16,8 +16,8 @@ const Projects = ({ Data }: any) => {
     <div className={styles.solutions} dir={language == 'ar' ? 'rtl' : 'ltr'}>
       <SectionTitle title={t('title')} subtitle={t('subtitle')} />
       <div className={styles.cards}>
-        {Data.map((solution: any) => (
-          <ProjectCard key={solution.id} data={solution} />
+        {Data.slice(0, 3).map((solution: any) => (
+          <ProjectCard key={solution?.id} data={solution} language={language} />
         ))}
       </div>
     </div>

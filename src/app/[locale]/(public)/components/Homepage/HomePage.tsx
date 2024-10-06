@@ -7,15 +7,14 @@ import Product from '../Products';
 import ContactSection from '../Contact';
 import Maintenance from '../Maintenance';
 
-import {
-  productSolutionData,
-  maintainanceSolutionData,
-} from '../data/solutionSectionData';
+import { maintainanceSolutionData } from '../data/solutionSectionData';
 import productData from '../data/productSectionData';
 
 const HomePage = async () => {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_APP_BASE_URL}`);
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_APP_BASE_URL}/api/projects`
+    );
 
     // Check if response is valid
     if (!res.ok) {
@@ -23,14 +22,13 @@ const HomePage = async () => {
       throw new Error(`Failed to fetch: ${res.statusText}`);
     }
 
-    const posts = await res.json();
-    console.log(posts, 'posts');
+    const projects = await res.json();
 
     return (
       <>
         <Hero />
         <About />
-        <Projects Data={productSolutionData} />
+        <Projects Data={projects} />
         <Consultation />
         <Product Data={productData} />
         <Maintenance Data={maintainanceSolutionData} />
@@ -41,8 +39,8 @@ const HomePage = async () => {
     console.error('Error fetching data:', error);
     return (
       <div>
-        <h1>Error loading page</h1>
-        <p>{error?.message}</p>
+        Error Occured. Try Again!
+        {/* <ErrorPage error={error} /> */}
       </div>
     );
   }

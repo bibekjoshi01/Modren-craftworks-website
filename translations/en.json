@@ -56,7 +56,7 @@
       "title": "PRODUCTS",
       "subtitle": "Solutions For Healthier Tomorrow",
       "outlinedBtn": "Learn More",
-      "detail": "Emkaan Provide integrated solutions to cover almost every need in any kind of a laboratory, cooperating with the world&rsquo;s producer"
+      "detail": "Emkaan Provide integrated solutions to cover almost every need in any kind of a laboratory, cooperating with the world's producer"
     },
     "maintenance": {
       "title": "MAINTENANCE AND SERVICE SOLUTIONS",
@@ -65,18 +65,18 @@
       "detail": "Emkaan Provide integrated solutions to cover almost every need in any kind of a laboratory, cooperating with the world&rsquo;s producer"
     },
     "contact": {
-      "title": "تواصل معنا",
-      "description": "حلولك تبدأ هنا!",
-      "location": "الرياض، المملكة العربية السعودية",
+      "title": "Contact",
+      "description": "Your Solution Starts Here!",
+      "location": "Riyadh, Saudi Arabia",
       "email": "info@emkaan.sa",
-      "phone": "(+966) 500487676",
-      "socialMedia": "روابط وسائل التواصل الاجتماعي",
+      "phone": "+966 500487676",
+      "socialMedia": "Social Media Links",
       "form": {
-        "title": "دعنا نتحدث!",
-        "fullName": "الاسم الكامل",
-        "email": "البريد الإلكتروني",
-        "message": "اكتب رسالتك..",
-        "submit": "إرسال"
+        "title": "Let’s Talk!",
+        "fullName": "Full Name",
+        "email": "Email",
+        "message": "Type your message..",
+        "submit": "Send"
       }
     }
   },
