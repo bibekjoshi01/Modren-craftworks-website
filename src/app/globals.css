@@ -62,3 +62,8 @@ body {
     width: 100vw;
   }
 }
+
+.typed-cursor {
+  opacity: 1;
+  font-weight: 500;
+}
