@@ -1,0 +1,86 @@
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+
+.visionSection {
+  @include flex(center, center, column, 20px);
+  margin: 10rem 0;
+  margin-bottom: 0;
+  padding-bottom: 100px;
+  text-align: center;
+
+  @include md {
+    margin: 5rem 0;
+  }
+
+  .content {
+    margin-bottom: 20px;
+    width: 80%;
+
+    @include md {
+      width: 100%;
+    }
+
+    .title {
+      @include font(var(--bukra-medium), 32px, 500);
+      color: $text-color-1;
+      line-height: 1.5;
+      text-transform: capitalize;
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+      margin: 0 auto;
+      margin-bottom: 40px;
+      padding: 0 10px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 3px;
+        height: 20px;
+        background-color: $secondary-color-medium;
+        z-index: -1;
+      }
+
+      @include md {
+        font-size: 30px;
+      }
+      @include sm {
+        font-size: 28px;
+      }
+      @include xs {
+        font-size: 26px;
+      }
+    }
+
+    .description {
+      @include font(var(--helvetica), 24px, 400);
+      color: $text-color-2;
+      line-height: 1.6;
+
+      @include md {
+        font-size: 22px;
+      }
+
+      @include sm {
+        font-size: 20px;
+      }
+      @include xs {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+    max-width: 300px;
+
+    .visionImage {
+      width: 100%;
+      height: auto;
+      background-size: cover;
+    }
+  }
+}

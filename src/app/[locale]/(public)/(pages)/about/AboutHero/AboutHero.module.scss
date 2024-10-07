@@ -1,0 +1,118 @@
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+
+.container {
+  padding: 40px 100px 0px;
+
+  @include lg {
+    padding: 80px;
+  }
+  @include md {
+    padding: 40px;
+  }
+  @include sm {
+    padding: 40px 10px;
+  }
+  @include xs {
+    padding: 40px 0px;
+  }
+
+  .head {
+    @include flex(center, center, column, 30px);
+    width: 100%;
+
+    .title {
+      @include font(var(--helvetica), 50px, 400);
+      text-align: center;
+      margin-bottom: 20px;
+
+      @include sm {
+        margin: 0;
+      }
+
+      @include md {
+        font-size: 40px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      border: 7px solid $primary-color;
+      border-radius: 20px;
+    }
+  }
+
+  .content {
+    @include flex(center, center, column, 10px);
+    margin-top: 80px;
+
+    @include sm {
+      margin-top: 40px;
+    }
+
+    .heading {
+      @include font(var(--bukra-medium), 40px, 500);
+      @include flex(flex-start, center, null, 12px);
+      color: $text-color-1;
+      text-wrap: wrap;
+      text-transform: capitalize;
+
+      @include sm {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        font-size: 28px;
+      }
+
+      img {
+        height: 7rem;
+        width: 16rem;
+
+        @include sm {
+          height: 5rem;
+          width: 12rem;
+        }
+      }
+
+      span {
+        color: $primary-color;
+      }
+
+      svg {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation:
+          draw 5s ease forwards,
+          fadeIn 1s ease-in forwards;
+      }
+
+      @keyframes draw {
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
+    .aboutText {
+      @include font(var(--helvetica), 24px, 400);
+      color: $text-color-2;
+      text-align: center;
+      line-height: 1.5;
+
+      @include sm {
+        font-size: 20px;
+      }
+    }
+  }
+}

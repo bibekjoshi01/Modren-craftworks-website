@@ -62,7 +62,7 @@
       "title": "MAINTENANCE AND SERVICE SOLUTIONS",
       "subtitle": "Leading the Way in Medical Solutions",
       "outlinedBtn": "Learn More",
-      "detail": "Emkaan Provide integrated solutions to cover almost every need in any kind of a laboratory, cooperating with the world&rsquo;s producer"
+      "detail": "Emkaan Provide integrated solutions to cover almost every need in any kind of a laboratory, cooperating with the world's producer"
     },
     "contact": {
       "title": "Contact",
@@ -93,6 +93,26 @@
       "email": "Email",
       "message": "Type your message..",
       "submit": "Send"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "ABOUT US",
+      "heading": "We Are",
+      "aboutText": "Emkaan Medical Company was established in Riyadh, KSA on solid grounds and is considered as an extension of the knowledge and expertise obtained by Scientific Diamond Company which was originally established in 2015 in KSA and UAE. Emkaan is managed and operated by an elite of high-profile specialists with years of experience in the field."
+    },
+    "ourStory": {
+      "title": "Our Story"
+    },
+    "ourVision": {
+      "title": "Our Vision"
+    },
+    "ourObjective": {
+      "title": "Our Objective"
+    },
+    "visionSection": {
+      "title": "Fulfilling The Kingdom’s Vision 2030",
+      "description": "Deeply Aligned With The Kingdom’s Vision 2030, Our Endeavors Go Beyond Business. We're On A Mission To Contribute Significantly To The Nation's Growth Narrative. By Bolstering Businesses And Encouraging Entrepreneurial Spirit, We Pledge To Play A Decisive Role In Realizing This Ambitious Vision."
     }
   }
 }

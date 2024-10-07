@@ -1,0 +1,87 @@
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+
+.container {
+  @include flex(center, center, row, 100px);
+  margin: 10rem 0;
+
+  @include md {
+    margin: 5rem 0;
+  }
+
+  @include lg {
+    gap: 80px;
+  }
+
+  @include md {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .textContainer {
+    flex: 1;
+
+    @include md {
+      order: 2;
+      text-align: center;
+    }
+
+    @include sm {
+      text-align: center;
+    }
+
+    .title {
+      @include font(var(--bukra-medium), 32px, 500);
+      color: $primary-color;
+      margin-bottom: 30px;
+
+      @include sm {
+        font-size: 28px;
+      }
+    }
+
+    .description {
+      @include font(var(--helvetica), 20px, 400);
+      color: $text-color-2;
+      line-height: 35px;
+
+      @include sm {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  .imageContainer {
+    flex: 1;
+    max-width: 720px;
+    height: auto;
+
+    @include md {
+      order: 1;
+    }
+
+    @include md {
+      width: 100%;
+    }
+
+    img {
+      border-radius: 20px;
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      transition: all 1s ease;
+
+      &:hover {
+        transform: scale(1.1) translateX(-5%) translateY(5%);
+      }
+
+      @include md {
+        transform: none;
+        &:hover {
+          transform: none;
+        }
+      }
+    }
+  }
+}
