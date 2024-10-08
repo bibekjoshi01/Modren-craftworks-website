@@ -2,16 +2,25 @@
 @import '../../../styles/variables';
 
 .container {
-  margin: 5rem 0;
+  margin: 5rem 0 0;
+  padding: 0px 40px;
+
+  @include md {
+    padding: 0 20px;
+    margin: 0;
+  }
+
+  @include sm {
+    padding: 0;
+  }
 
   .textContainer {
-    border-radius: 30px;
+    border-radius: 30px 30px 0 0;
     background-image: linear-gradient(50%, #ffffff 50%, #e7e7e7 10%);
     border-image: linear-gradient(100%, #ffffff 100%, #909090 20%) 1;
 
     /* Box Shadow */
     box-shadow: 0 0 10px rgba(158, 158, 158, 0.16);
-
     padding: 80px 50px;
 
     @include md {
@@ -32,7 +41,7 @@
         font-size: 20px;
         line-height: 28px;
       }
-      
+
       @include sm {
         font-size: 18px;
         line-height: 28px;

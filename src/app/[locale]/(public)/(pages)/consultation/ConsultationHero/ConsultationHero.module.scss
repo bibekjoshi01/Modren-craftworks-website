@@ -28,5 +28,9 @@
     @include md {
       font-size: 40px;
     }
+    
+    @include xs {
+      font-size: 30px;
+    }
   }
 }

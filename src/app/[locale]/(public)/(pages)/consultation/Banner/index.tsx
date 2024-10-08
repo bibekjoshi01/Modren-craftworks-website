@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import styles from './Banner.module.scss';
 
 const Banner: React.FC = () => {
-  const t = useTranslations('maintenance');
+  const t = useTranslations('consultation');
   const pathname = usePathname();
 
   // Extract the language (first path segment)
