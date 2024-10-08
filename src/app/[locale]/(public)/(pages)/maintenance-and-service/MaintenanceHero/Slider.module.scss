@@ -1,0 +1,113 @@
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+
+.imageContainer {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  height: 700px;
+
+  @include md {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: auto;
+    // Hide all images except the first one
+    .two,
+    .three {
+      display: none;
+    }
+  }
+
+  .one,
+  .two,
+  .three {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: unset;
+
+    @include md {
+      border-radius: 20px;
+      box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .title {
+    @include font(var(--helvetica-neue), 32px, 600);
+    color: $gradient-linear-full;
+    text-align: center;
+    color: $text-color-4;
+    margin-top: 40px;
+  }
+
+  .one {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 5;
+    viewtransitionname: image1;
+
+    .title {
+      viewtransitionname: title1;
+    }
+  }
+
+  .two {
+    grid-column: 4 / span 8;
+    grid-row: 1 / span 7;
+    z-index: 10;
+    viewtransitionname: image2;
+
+    .title {
+      viewtransitionname: title2;
+      font-size: 2.2rem;
+      background-image: $gradient-linear-full;
+      color: transparent;
+      -webkit-background-clip: text;
+    }
+
+    img {
+      border-radius: 30px;
+      box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.1);
+
+      @include md {
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .three {
+    grid-column: 11 / span 4;
+    grid-row: 2 / span 5;
+    viewtransitionname: image3;
+
+    .title {
+      viewtransitionname: title3;
+    }
+  }
+}
+
+// Auto-show images in mobile view
+@media only screen and (max-width: 768px) {
+  .imageContainer {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: auto;
+    position: relative;
+
+    .one,
+    .two,
+    .three {
+      opacity: 0;
+      position: absolute;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .one {
+      opacity: 1;
+    }
+  }
+}

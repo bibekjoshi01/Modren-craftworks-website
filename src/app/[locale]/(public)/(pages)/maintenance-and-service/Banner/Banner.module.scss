@@ -1,0 +1,46 @@
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+
+.container {
+  margin: 5rem 0;
+
+  @include md {
+    margin: 0;
+  }
+
+  .textContainer {
+    border-radius: 30px;
+    background-image: linear-gradient(50%, #ffffff 50%, #e7e7e7 10%);
+    border-image: linear-gradient(100%, #ffffff 100%, #909090 20%) 1;
+
+    /* Box Shadow */
+    box-shadow: 0 0 10px rgba(158, 158, 158, 0.16);
+
+    padding: 80px 50px;
+
+    @include md {
+      padding: 60px 40px;
+    }
+
+    @include sm {
+      padding: 40px 20px;
+    }
+
+    .description {
+      @include font(var(--bukra-regular), 24px, 400);
+      color: $text-color-2;
+      line-height: 40px;
+      text-align: center;
+
+      @include md {
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      @include sm {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+}

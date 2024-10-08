@@ -1,0 +1,96 @@
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+
+.servicesSection {
+  @include flex(center, center, row, null);
+  padding: 80px 0 150px;
+
+  @include md {
+    padding-bottom: 100px;
+  }
+}
+
+.servicesContainer {
+  @include flex(center, center, row, null);
+  background-color: #fff;
+  border-radius: 15px;
+
+  @include md {
+    gap: 20px;
+  }
+}
+
+.iconBox {
+  @include flex(center, center, column, 20px);
+  padding: 40px 100px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+  margin-right: -70px;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 30px;
+  height: 550px;
+  width: 500px;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.iconBox h2 {
+  @include font(var(--bukra-medium), 32px, 500);
+  color: $text-color-1;
+}
+
+.servicesList {
+  @include flex(flex-start, center, column, null);
+  padding-left: 40px;
+  flex: 2;
+
+  @include md {
+    align-items: center;
+  }
+}
+
+.serviceItem {
+  @include font(var(--bukra-medium), 20px, 500);
+  background-color: $primary-color;
+  color: white;
+  padding: 12px 70px;
+  margin: 10px 0;
+  border-radius: 25px;
+  font-size: 18px;
+  text-align: center;
+  width: max-content;
+
+  @include md {
+    width: max-content;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    padding: 12px 40px;
+  }
+}
+
+.serviceItem:hover {
+  background-image: $gradient-linear-full;
+}
+
+@include md {
+  .servicesContainer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .servicesList {
+    padding-left: 0;
+  }
+
+  .iconBox {
+    border-right: none;
+    border-bottom: 2px solid #eaeaea;
+    margin-bottom: 20px;
+  }
+}
