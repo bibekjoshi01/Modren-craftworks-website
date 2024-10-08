@@ -2,6 +2,7 @@
 import './globals.css';
 import localFont from 'next/font/local';
 import { Roboto } from 'next/font/google';
+import { usePathname } from 'next/navigation';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -52,12 +53,25 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+
+  // Extract the language (first path segment)
+  const language = pathname?.split('/')[1] || 'en';
+  // Determine the font class based on language
+
   return (
     <html
       className={`${BukraBold.variable} ${BukraMedium.variable} ${BukraRegular.variable} ${Helvetica.variable} ${HelveticaNeue.variable} ${HelveticaNeueMedium.variable} ${roboto.variable}`}
-      lang="en"
+      lang={language === 'ar' ? 'ar' : 'en'}
     >
-      <body>{children}</body>
+      <body
+        style={{
+          fontFamily:
+            language == 'ar' ? 'var(--bukra-regular) !important' : 'unset',
+        }}
+      >
+        {children}
+      </body>
     </html>
   );
 }
