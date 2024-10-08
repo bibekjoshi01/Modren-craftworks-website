@@ -54,9 +54,10 @@
           cursor: pointer;
           @include font(var(--bukra-medium), 18px, 500);
           color: $text-color-5;
-          margin-bottom: 0.5rem;
+          margin-bottom: 8px;
           transition: all 0.3s ease;
           text-transform: capitalize;
+          line-height: 1.6;
 
           @include md {
             font-size: 16px;

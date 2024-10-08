@@ -4,7 +4,7 @@
 .solutions {
   max-width: $maxWidth;
   margin: 0 auto;
-  padding: 6rem 40px;
+  padding: 5rem 80px 20px;
   font-family: $secondaryFont;
   @include md {
     padding: 0 20px;
@@ -20,17 +20,16 @@
       flex-direction: column; // Stack cards vertically
       gap: 2rem;
     }
-
+    
     // Small devices (phones)
     @include sm {
-      flex-direction: column; // Stack cards vertically for smaller phones
       gap: 2rem;
+      flex-direction: column; // Stack cards vertically for smaller phones
     }
 
     // Medium devices (tablets)
     @include md {
       flex-direction: row; // Display cards in a row
-      gap: 1rem;
       & > * {
         flex: 1 1 calc(50% - 1rem); // Make two cards fit in a row
       }
@@ -39,7 +38,6 @@
     // Large devices (small laptops)
     @include lg {
       flex-direction: row;
-      gap: 1rem;
       & > * {
         flex: 1 1 calc(33.33% - 1rem); // Make three cards fit in a row
       }
@@ -48,7 +46,6 @@
     // Extra large devices (laptops, desktops)
     @include xl {
       flex-direction: row;
-      gap: 1rem;
       & > * {
         flex: 1 1 calc(25% - 1rem); // Four cards in a row on larger screens
       }
@@ -57,7 +54,6 @@
     // Ultra large devices (large desktops)
     @include xxl {
       flex-direction: row;
-      gap: 1rem;
       & > * {
         flex: 1 1 calc(20% - 1rem); // Five cards in a row for ultra-large desktops
       }

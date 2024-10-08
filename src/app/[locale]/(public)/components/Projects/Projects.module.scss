@@ -4,7 +4,7 @@
 .solutions {
   max-width: $maxWidth;
   margin: 0 auto;
-  padding: 6rem 40px;
+  padding: 6rem 80px;
   font-family: $secondaryFont;
   @include md {
     padding: 0 20px;
@@ -39,7 +39,6 @@
     // Large devices (small laptops)
     @include lg {
       flex-direction: row;
-      gap: 1rem;
       & > * {
         flex: 1 1 calc(33.33% - 1rem); // Make three cards fit in a row
       }
@@ -48,7 +47,6 @@
     // Extra large devices (laptops, desktops)
     @include xl {
       flex-direction: row;
-      gap: 1rem;
       & > * {
         flex: 1 1 calc(25% - 1rem); // Four cards in a row on larger screens
       }
@@ -57,7 +55,6 @@
     // Ultra large devices (large desktops)
     @include xxl {
       flex-direction: row;
-      gap: 1rem;
       & > * {
         flex: 1 1 calc(20% - 1rem); // Five cards in a row for ultra-large desktops
       }
