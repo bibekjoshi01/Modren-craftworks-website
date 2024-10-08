@@ -5,8 +5,12 @@
   @include flex(center, center, row, 60px);
   max-width: $maxWidth;
   margin: 0 auto;
-  padding: 10rem 40px;
+  padding: 10rem 100px;
   font-family: $secondaryFont;
+
+  @include lg {
+    padding: 10rem 80px;
+  }
 
   @include md {
     flex-direction: column;
@@ -99,6 +103,21 @@
       @include font(var(--helvetica), 24px, 400);
       color: $text-color-3;
       margin: auto 0;
+      line-height: 1.2;
+
+      @include xxl {
+        padding-right: 150px;
+      }
+      @include xl {
+        padding-right: 100px;
+      }
+      @include lg {
+        padding-right: 80px;
+      }
+
+      @include md {
+        padding-right: unset;
+      }
 
       @include sm {
         font-size: 18px;
@@ -123,7 +142,7 @@
         font-size: 14px;
       }
 
-      transition: all 1s ease;
+      transition: background-image 0.3s ease;
 
       svg {
         fill: $primary-color;
