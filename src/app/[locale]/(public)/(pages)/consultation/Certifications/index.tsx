@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { StaticImageData } from 'next/image';
 import styles from './Certifications.module.scss';
 import Image1 from '../../../assets/consultationImages/Certifications/image1.png';
 import Image2 from '../../../assets/consultationImages/Certifications/image2.png';
@@ -13,16 +14,21 @@ import Image7 from '../../../assets/consultationImages/Certifications/image7.png
 import Image8 from '../../../assets/consultationImages/Certifications/image8.png';
 import Image9 from '../../../assets/consultationImages/Certifications/image9.png';
 
-const certifications: any = [
-  Image1,
-  Image2,
-  Image3,
-  Image4,
-  Image5,
-  Image6,
-  Image7,
-  Image8,
-  Image9,
+type Certification = {
+  source: StaticImageData;
+  alt: string;
+};
+
+const certifications: Certification[] = [
+  { source: Image1, alt: 'Certificate 1' },
+  { source: Image2, alt: 'Certificate 2' },
+  { source: Image3, alt: 'Certificate 3' },
+  { source: Image4, alt: 'Certificate 4' },
+  { source: Image5, alt: 'Certificate 5' },
+  { source: Image6, alt: 'Certificate 6' },
+  { source: Image7, alt: 'Certificate 7' },
+  { source: Image8, alt: 'Certificate 8' },
+  { source: Image9, alt: 'Certificate 9' },
 ];
 
 function Certifications() {
@@ -33,7 +39,7 @@ function Certifications() {
           return (
             <Image
               key={index}
-              src={certificate}
+              src={certificate?.source}
               width={500}
               height={500}
               alt="certificate"

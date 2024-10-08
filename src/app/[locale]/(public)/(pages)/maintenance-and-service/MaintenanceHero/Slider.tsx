@@ -1,14 +1,20 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 import styles from './Slider.module.scss';
+import Image, { StaticImageData } from 'next/image';
 import useImageSliderWithViewTransition from '../../../hooks/useImageSliderWithViewTransition';
 import image1 from '../../../assets/solutionSectionImages/maintainanceSolutionImages/image1.png';
 import image2 from '../../../assets/solutionSectionImages/maintainanceSolutionImages/image2.png';
 import image3 from '../../../assets/solutionSectionImages/maintainanceSolutionImages/image3.png';
 
 // Define initial images
-const imageObjsInitial = [
+type imageData = {
+  id: number;
+  src: StaticImageData;
+  title: string;
+};
+
+const imageObjsInitial: imageData[] = [
   {
     id: 1,
     src: image1,
@@ -36,15 +42,10 @@ const Slider = () => {
 
   return (
     <div className={styles.imageContainer}>
-      {imageObjs.map((imageObj, index) => (
-        <div key={imageObj.id} className={styles[classNames[index]]}>
-          <Image
-            height={500}
-            width={500}
-            src={imageObj.src}
-            alt={imageObj.title}
-          />
-          <h1 className={styles.title}>{imageObj.title}</h1>
+      {imageObjs?.map((obj: imageData, index: number) => (
+        <div key={obj.id} className={styles[classNames[index]]}>
+          <Image height={500} width={500} src={obj.src} alt={obj.title} />
+          <h1 className={styles.title}>{obj.title}</h1>
         </div>
       ))}
     </div>
