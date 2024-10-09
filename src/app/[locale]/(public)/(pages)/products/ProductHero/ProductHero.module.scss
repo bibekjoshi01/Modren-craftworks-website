@@ -1,0 +1,36 @@
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+
+.container {
+  padding: 40px 100px 0px;
+
+  @include lg {
+    padding: 80px;
+  }
+  @include md {
+    padding: 40px;
+  }
+  @include sm {
+    padding: 40px 10px;
+  }
+  @include xs {
+    padding: 40px 0px;
+  }
+
+  .title {
+    @include font(var(--helvetica), 50px, 400);
+    text-align: center;
+
+    @include sm {
+      margin: 0;
+    }
+
+    @include md {
+      font-size: 40px;
+    }
+    
+    @include xs {
+      font-size: 30px;
+    }
+  }
+}
