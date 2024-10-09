@@ -75,6 +75,7 @@
         "title": "Let’s Talk!",
         "fullName": "Full Name",
         "email": "Email",
+        "phoneNumber": "Phone Number",
         "message": "Type your message..",
         "submit": "Send"
       }

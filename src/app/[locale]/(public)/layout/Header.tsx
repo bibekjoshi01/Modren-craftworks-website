@@ -5,8 +5,9 @@ import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.scss';
-import Logo from '../assets/images/logo.png';
+// import Logo from '../assets/images/logo.png';
 import { getMenuLinks } from './menuLinks';
+import Logo from '../ui/Logo';
 
 const Header = () => {
   const t = useTranslations();
@@ -61,14 +62,19 @@ const Header = () => {
 
   return (
     <header
-      className={styles.header}
+      className={`${styles.header} ${selectedLanguage == 'ar' && 'rtl'}`}
       dir={selectedLanguage == 'ar' ? 'rtl' : 'ltr'}
     >
       <div className={styles.logo}>
-        <Image priority src={Logo} width={900} height={500} alt="Logo" />
+        <Logo />
+        {/* <Image priority src={Logo} width={900} height={500} alt="Logo" /> */}
       </div>
       <nav className={styles.nav}>
-        <ul className={styles.navLinks}>
+        <ul
+          className={`${styles.navLinks} ${
+            selectedLanguage == 'ar' && styles.rtl
+          }`}
+        >
           {menuLinks.map((link, index) => {
             const strippedPath = pathname.split('/').slice(2).join('/');
             const linkPath = link.path.replace(/^\//, '');

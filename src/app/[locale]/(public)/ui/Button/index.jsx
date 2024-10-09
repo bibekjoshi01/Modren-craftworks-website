@@ -10,9 +10,9 @@ const OutlinedBtn = ({ text, svg }) => {
   );
 };
 
-const FilledBtn = ({ text, svg }) => {
+const FilledBtn = ({ text, svg, active = true }) => {
   return (
-    <button className={styles.filledBtn}>
+    <button className={`${styles.filledBtn} ${!active && styles.disabled}`}>
       <span> {text} </span> {svg && svg}
     </button>
   );
