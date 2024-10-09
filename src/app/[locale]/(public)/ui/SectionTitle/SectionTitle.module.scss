@@ -4,7 +4,7 @@
 .title {
   @include flex(center, center, column, 20px);
   margin-bottom: 50px;
-  font-family: var(--HelveticaNeue);
+  font-family: var(--reg-helveticaNeue-bukra);
 
   h4 {
     font-size: 20px;
@@ -18,7 +18,7 @@
     position: relative;
 
     h1 {
-      @include font(var(--HelveticaNeue), 50px, 400);
+      @include font(var(--reg-helveticaNeue-bukra), 50px, 400);
       text-align: center;
       color: $text-color-1;
       position: relative;

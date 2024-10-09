@@ -2,7 +2,7 @@
 @import '../../styles/variables';
 
 .outlinedBtn {
-  @include font(var(--roboto), 16px, 600);
+  @include font(var(--reg-roboto-bukra), 16px, 600);
   background-color: transparent;
   color: $primary-color;
   position: relative;
@@ -69,7 +69,7 @@
 }
 
 .filledBtn {
-  @include font(var(--roboto), 20px, 600);
+  @include font(var(--reg-roboto-bukra), 20px, 600);
   @include flex(center, center, center, 15px);
   color: white;
   background-color: $primary-color;

@@ -38,12 +38,12 @@
   flex: 1;
 
   h1 {
-    @include font(var(--HelveticaNeue), 44px, 500);
+    @include font(var(--reg-helveticaNeue-bukra), 44px, 500);
     text-transform: uppercase;
   }
 
   p {
-    @include font(var(--helvetica), 18px, 400);
+    @include font(var(--reg-helvetica-bukra), 18px, 400);
     line-height: 1.6;
     letter-spacing: 0.1px;
   }
@@ -127,13 +127,13 @@
   }
 
   h2 {
-    @include font(var(--helvetica), 28px, 400);
+    @include font(var(--reg-helvetica-bukra), 28px, 400);
     letter-spacing: 1.5px;
   }
 
   input,
   textarea {
-    font-family: var(--roboto);
+    font-family: var(--reg-roboto-bukra);
     width: 100%;
     padding: 16px 20px;
     margin-block: 10px;
@@ -150,7 +150,7 @@
 
   input::placeholder,
   textarea::placeholder {
-    font-family: var(--roboto);
+    font-family: var(--reg-roboto-bukra);
     font-weight: 300;
     color: #ababab;
   }
@@ -167,7 +167,7 @@
     border: none;
     background-color: $primary-color;
     color: white;
-    @include font(var(--roboto), 20px, 600);
+    @include font(var(--reg-roboto-bukra), 20px, 600);
     padding: clamp(0.6rem, 1.6vw + 0.2rem, 0.8rem);
     display: flex;
     text-transform: uppercase;
@@ -197,7 +197,7 @@
     }
 
     .rtl {
-      transform: rotate(180deg); 
+      transform: rotate(180deg);
     }
 
     span {

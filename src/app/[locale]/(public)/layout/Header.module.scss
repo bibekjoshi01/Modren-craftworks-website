@@ -46,7 +46,7 @@
       @include flex(center, center, row, 3rem);
       list-style: none;
       flex-wrap: wrap;
-      font-family: var(--helvetica);
+      font-family: var(--reg-helvetica-bukra);
 
       .links {
         font-weight: 400;
@@ -83,7 +83,7 @@
 
   // Language Switch Button
   .languageSwitch {
-    @include font(var(--helvetica), 18px, bold);
+    @include font(var(--reg-helvetica-bukra), 18px, bold);
     color: $secondary-color;
     cursor: pointer;
     margin-left: 1rem;
