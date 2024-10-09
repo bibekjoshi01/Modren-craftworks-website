@@ -7,9 +7,10 @@
   padding: 40px 40px 0;
 
   .logo {
-    margin-bottom: 20px;
+    margin: 40px 0 50px;
 
     @include md {
+      margin: 20px 0 30px;
       width: 100%;
     }
 
@@ -52,7 +53,7 @@
 
         li {
           cursor: pointer;
-          @include font(var(--bukra-medium), 18px, 500);
+          @include font(var(--bukra-medium), 17px, 500);
           color: $text-color-5;
           margin-bottom: 8px;
           transition: all 0.3s ease;
@@ -82,7 +83,7 @@
 
       h4 {
         color: $text-color-1;
-        @include font(var(--bukra-medium), 18px, 400);
+        @include font(var(--bukra-medium), 17px, 400);
         text-transform: uppercase;
         @include md {
           font-size: 16px;
@@ -94,7 +95,7 @@
       }
 
       .contactDetails {
-        @include font(var(--bukra-medium), 18px, 500);
+        @include font(var(--bukra-medium), 17px, 500);
         @include flex(flex-start, flex-start, column, null);
         @include md {
           font-size: 16px;

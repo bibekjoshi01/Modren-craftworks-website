@@ -5,8 +5,10 @@ import ContactInfo from '../../ui/ContactInfo';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import ArrowRightSVG from '../../ui/ArrowRightSVG';
+import { useState } from 'react';
 
 const ContactSection = () => {
+  const [active, setActive] = useState(false);
   const t = useTranslations('home.contact');
   const pathname = usePathname();
 
@@ -26,8 +28,13 @@ const ContactSection = () => {
             <h2>{t('form.title')}</h2>
             <input type="text" placeholder={t('form.fullName')} />
             <input type="email" placeholder={t('form.email')} />
+            <input type="tel" placeholder={t('form.phoneNumber')} />
             <textarea rows={6} placeholder={t('form.message')}></textarea>
-            <FilledBtn text={t('form.submit')} svg={<ArrowRightSVG />} />
+            <FilledBtn
+              text={t('form.submit')}
+              svg={<ArrowRightSVG />}
+              active={active}
+            />
           </form>
           <div className={styles.contactInfo}>
             <ContactInfo />

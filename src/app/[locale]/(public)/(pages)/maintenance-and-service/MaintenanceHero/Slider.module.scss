@@ -50,6 +50,7 @@
     viewtransitionname: image1;
 
     .title {
+      @include font(var(--bukra-medium), 1.6rem, 400);
       viewtransitionname: title1;
     }
   }
@@ -61,11 +62,12 @@
     viewtransitionname: image2;
 
     .title {
+      @include font(var(--bukra-bold), 2.2rem, 600);
       viewtransitionname: title2;
-      font-size: 2.2rem;
-      background-image: $gradient-linear-full;
       color: transparent;
+      background-image: $gradient-linear-full;
       -webkit-background-clip: text;
+      background-clip: text;
     }
 
     img {
@@ -84,6 +86,7 @@
     viewtransitionname: image3;
 
     .title {
+      @include font(var(--bukra-medium), 1.6rem, 400);
       viewtransitionname: title3;
     }
   }

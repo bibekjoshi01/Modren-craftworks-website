@@ -75,6 +75,7 @@
         "title": "Let’s Talk!",
         "fullName": "Full Name",
         "email": "Email",
+        "phoneNumber": "Phone Number",
         "message": "Type your message..",
         "submit": "Send"
       }
@@ -120,6 +121,14 @@
   },
   "consultation": {
     "title": "CONSULTATION",
+    "banner": "Emkaan technical consultations standout with extensive experience in the consultancies, where we seek achieving all the requirements and following all international and local standardized such as"
+  },
+  "product": {
+    "title": "PRODUCTS",
+    "banner": "Emkaan technical consultations standout with extensive experience in the consultancies, where we seek achieving all the requirements and following all international and local standardized such as"
+  },
+  "project": {
+    "title": "PROJECTS",
     "banner": "Emkaan technical consultations standout with extensive experience in the consultancies, where we seek achieving all the requirements and following all international and local standardized such as"
   }
 }

@@ -7,7 +7,7 @@ import Certifications from './Certifications';
 const Consultation = () => {
   return (
     <section className={styles.maintenancePage}>
-      <ConsultationHero />;
+      <ConsultationHero />
       <Banner />
       <Certifications />
       <ServicesSection />

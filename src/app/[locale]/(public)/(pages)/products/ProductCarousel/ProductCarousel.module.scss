@@ -1,0 +1,93 @@
+@import '../../../styles/mixin';
+@import '../../../styles/variables';
+
+.carouselContainer {
+  margin: 5rem 0;
+  @include flex(center, center, row, null);
+  width: 100%;
+  position: relative;
+  padding: 40px 80px;
+
+  .carousel {
+    margin: 0 100px;
+  }
+
+  .navButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: $primary-color;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    @include flex(center, center, row, null);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-image: $gradient-linear-full;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+  .prevButton {
+    left: 80px;
+  }
+
+  .nextButton {
+    right: 80px;
+  }
+  .swiper {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @include flex(center, center, row, null);
+    background-color: #6699a1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #3f6877;
+    }
+  }
+
+  .slideItem {
+    @include flex(center, center, column, 30px);
+    text-align: center;
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    p {
+      @include font(var(--bukra-medium), 16px, 600);
+      color: $text-color-2;
+      font-weight: 500;
+    }
+  }
+}

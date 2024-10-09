@@ -2,6 +2,7 @@
 @import '../../styles/variables';
 
 .contact {
+  width: 100%;
   margin: 4rem 0 0;
   background: linear-gradient(
     122.74deg,
@@ -90,6 +91,7 @@
 
       form {
         flex: 2;
+        max-width: 800px; 
 
         h2 {
           font-family: var(--med--helveticaNeueMedium-bukra);
