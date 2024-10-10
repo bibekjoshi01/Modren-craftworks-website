@@ -7,6 +7,62 @@
   margin: 0 auto;
   padding: 10rem 100px;
   font-family: $secondaryFont;
+  position: relative;
+
+  .backgroundImgContainer {
+    position: absolute;
+    background-size: cover;
+    height: 50%;
+    // width: 100%; media query
+    // border: 1px solid green;
+    // top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: -1;
+  }
+
+  // .gradientEllipse {
+  //   position: absolute;
+  //   width: 2111.97px;
+  //   height: 2111.97px;
+  //   left: -135vw;
+  //   // top: 110%;
+  //   top: 0;
+  //   z-index: -1;
+  //   transform: rotate(68.76deg);
+  //   background: linear-gradient(135deg, #045161 24%, #ffffff 60%);
+  //   border-radius: 50%;
+  //   filter: blur(500px);
+  // }
+  .gradientEllipse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    // left: -40% !important;
+    left: -40% !important;
+
+    // opacity: ;
+    // top: 110%;
+    top: 65%;
+    z-index: -1;
+    transform: rotate(68.76deg);
+    background: linear-gradient(135deg, #045161 10%, #ffffff 60%);
+    border-radius: 50%;
+    filter: blur(500px);
+    overflow-x: hidden;
+  }
+
+  //   .gradientEllipse {
+  //   position: absolute;
+  //   width: 2111.97px;
+  //   height: 2111.97px;
+  //   left: 1229.51px;
+  //   transform: rotate(68.76deg);
+  //   background: linear-gradient(135deg, #045161 24%, #ffffff 60%);
+  //   border-radius: 50%;
+  //   filter: blur(500px);
+  // }
 
   @include lg {
     padding: 10rem 80px;
@@ -19,6 +75,20 @@
 
   @include sm {
     padding: 5rem 20px;
+    .backgroundImgContainer {
+      width: 95%;
+      height: 30% !important;
+      z-index: -1;
+
+
+    }
+    .gradientEllipse {
+      width: 100%;
+      height: 100%;
+      left: -150% !important;
+      z-index: -1;
+      background: linear-gradient(135deg, #045161 200%, #ffffff 60%) ;
+    }
   }
 
   .left {

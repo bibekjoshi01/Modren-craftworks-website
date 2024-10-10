@@ -24,6 +24,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+   /* header sticky no working if this is uncommented  */
   font-family: var(--reg-helvetica-bukra);
 }
 

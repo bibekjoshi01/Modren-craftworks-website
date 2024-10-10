@@ -8,6 +8,9 @@
   background-color: white;
   margin: 0 auto;
   max-width: $maxWidth;
+  // position: sticky;
+  // z-index: 999999;
+  // top: 0;
 
   @include md {
     padding: 20px 30px;
