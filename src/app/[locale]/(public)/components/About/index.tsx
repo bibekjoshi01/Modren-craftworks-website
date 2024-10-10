@@ -13,7 +13,6 @@ import ArrowRightSVG from '../../ui/ArrowRightSVG';
 
 import bgImage1 from '../../../../../../public/svg/Group49.png';
 
-
 const About = () => {
   const { image } = useImageSlider([image1, image2, image3], 1500);
   const t = useTranslations('home.about');
@@ -30,9 +29,7 @@ const About = () => {
 
   return (
     <div className={styles.about} dir={language == 'ar' ? 'rtl' : 'ltr'}>
-      <div className={styles.gradientEllipse}>
-
-      </div>
+      <div className={styles.gradientEllipse}></div>
       <div>
         {' '}
         <Image
