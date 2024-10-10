@@ -45,14 +45,14 @@
       }
 
       h4 {
-        @include font(var(--HelveticaNeue), 20px, 500);
+        @include font(var(--reg-helveticaNeue-bukra), 20px, 500);
         text-align: center;
         color: #4d4d4d;
         text-transform: uppercase;
       }
 
       h1 {
-        @include font(var(--HelveticaNeue-medium), 50px, 400);
+        @include font(var(--med--helveticaNeueMedium-bukra), 50px, 400);
         text-align: center;
         color: $text-color-1;
         margin-top: 20px;
@@ -94,7 +94,7 @@
         max-width: 800px; 
 
         h2 {
-          font-family: var(--HelveticaNeue-medium);
+          font-family: var(--med--helveticaNeueMedium-bukra);
           font-size: 28px;
           color: #232323;
           letter-spacing: 3px;
@@ -104,7 +104,7 @@
 
         input,
         textarea {
-          font-family: var(--roboto);
+          font-family: var(--reg-roboto-bukra);
           width: 100%;
           padding: 20px 24px;
           margin-block: 10px;
@@ -121,7 +121,7 @@
 
         input::placeholder,
         textarea::placeholder {
-          font-family: var(--roboto);
+          font-family: var(--reg-roboto-bukra);
           font-weight: 300;
           color: #ababab;
         }

@@ -9,7 +9,7 @@
 
   .contactDetails {
     @include flex(flex-start, flex-start, column, 50px);
-    font-family: Helvetica, sans-serif;
+    font-family: var(--reg-helvetica-bukra);
 
     p {
       @include flex(center, flex-start, row, 20px);

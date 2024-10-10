@@ -78,7 +78,7 @@
     .contact {
       @include sm {
         flex-basis: 100%;
-        margin-top: 2rem; 
+        margin-top: 2rem;
       }
 
       h4 {
@@ -155,7 +155,7 @@
     margin: 20px;
     text-align: center;
     color: $text-color-5;
-    @include font(var(--roboto), 20px, 300);
+    @include font(var(--reg-roboto-bukra), 20px, 300);
 
     @include md {
       font-size: 18px;
