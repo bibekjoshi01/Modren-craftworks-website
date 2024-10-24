@@ -10,7 +10,7 @@
     margin-bottom: 50px;
 
     .title {
-      @include font(var(--helvetica), 50px, 400);
+      @include font(var(--reg-helvetica-bukra), 50px, 400);
       text-align: center;
       margin-bottom: 20px;
       text-transform: uppercase;

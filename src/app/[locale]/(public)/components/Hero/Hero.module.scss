@@ -95,7 +95,7 @@
       }
 
       .filledBtn {
-        @include font(var(--roboto), 20px, 600);
+        @include font(var(--reg-roboto-bukra), 20px, 600);
         @include flex(center, center, row, 10px);
         text-transform: uppercase;
         color: white;
@@ -131,7 +131,7 @@
 
       .outlinedBtn {
         @include flex(center, center, row, 20px);
-        @include font(var(--roboto), 20px, 600);
+        @include font(var(--reg-roboto-bukra), 20px, 600);
         background-color: transparent;
         text-transform: uppercase;
         color: $primary-color;

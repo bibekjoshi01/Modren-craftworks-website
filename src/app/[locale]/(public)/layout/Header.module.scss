@@ -8,6 +8,9 @@
   background-color: white;
   margin: 0 auto;
   max-width: $maxWidth;
+  // position: sticky;
+  // z-index: 999999;
+  // top: 0;
 
   @include md {
     padding: 20px 30px;
@@ -52,7 +55,7 @@
       @include flex(center, center, row, 4rem);
       list-style: none;
       flex-wrap: wrap;
-      font-family: var(--helvetica);
+      font-family: var(--reg-helvetica-bukra);
 
       .links {
         font-weight: 400;
@@ -89,7 +92,7 @@
 
   // Language Switch Button
   .languageSwitch {
-    @include font(var(--helvetica), 18px, bold);
+    @include font(var(--reg-helvetica-bukra), 18px, bold);
     color: $secondary-color;
     cursor: pointer;
     margin-left: 1rem;

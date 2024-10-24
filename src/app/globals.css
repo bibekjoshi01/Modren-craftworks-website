@@ -12,12 +12,20 @@
 
   --text-color: #383e41;
   --text-color-light: #696969;
+  /* regular font for roboto to bukra conversion , default is roboto */
+  --reg-roboto-bukra: var(--roboto);
+  --reg-helveticaNeue-bukra: var(--HelveticaNeue);
+  --reg-helvetica-bukra: var(--helvetica);
+  /* medium font for helveticaNeueMedium to bukra conversion , default is --HelveticaNeue-medium */
+  --med--helveticaNeueMedium-bukra: var(--HelveticaNeue-medium);
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+   /* header sticky no working if this is uncommented  */
+  font-family: var(--reg-helvetica-bukra);
 }
 
 .App > div {

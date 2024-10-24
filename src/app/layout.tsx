@@ -3,6 +3,7 @@ import './globals.css';
 import localFont from 'next/font/local';
 import { Roboto } from 'next/font/google';
 import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700', '900'],
@@ -58,6 +59,51 @@ export default function RootLayout({
   // Extract the language (first path segment)
   const language = pathname?.split('/')[1] || 'en';
   // Determine the font class based on language
+  useEffect(() => {
+    // Update CSS variables based on language
+    if (language === 'ar') {
+      //change font roboto to bukra regular when changing language to ar
+      document.documentElement.style.setProperty(
+        '--reg-roboto-bukra',
+        'var(--bukra-regular)'
+      );
+
+      document.documentElement.style.setProperty(
+        '--reg-helveticaNeue-bukra',
+        'var(--bukra-regular)'
+      );
+
+      document.documentElement.style.setProperty(
+        '--med--helveticaNeueMedium-bukra',
+        'var(--bukra-medium)'
+      );
+
+      document.documentElement.style.setProperty(
+        '--reg-helvetica-bukra',
+        'var(--bukra-regular)'
+      );
+    } else {
+      document.documentElement.style.setProperty(
+        '--reg-roboto-bukra',
+        'var(--roboto)'
+      );
+
+      document.documentElement.style.setProperty(
+        '--reg-helveticaNeue-bukra',
+        'var(--HelveticaNeue)'
+      );
+
+      document.documentElement.style.setProperty(
+        '--med--helveticaNeueMedium-bukra',
+        'var(--HelveticaNeue-medium)'
+      );
+
+      document.documentElement.style.setProperty(
+        '--reg-helvetica-bukra',
+        'var(--helvetica)'
+      );
+    }
+  }, [language]);
 
   return (
     <html
@@ -65,10 +111,10 @@ export default function RootLayout({
       lang={language === 'ar' ? 'ar' : 'en'}
     >
       <body
-        style={{
-          fontFamily:
-            language == 'ar' ? 'var(--bukra-regular) !important' : 'unset',
-        }}
+      // style={{
+      //   fontFamily:
+      //     language == 'ar' ? 'var(--bukra-regular) !important' : 'unset',
+      // }}
       >
         {children}
       </body>
