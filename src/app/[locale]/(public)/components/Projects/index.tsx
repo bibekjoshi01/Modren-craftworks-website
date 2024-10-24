@@ -13,7 +13,7 @@ const Projects = ({ Data }: any) => {
   const language = pathname?.split('/')[1] || 'en';
 
   return (
-    <div className={styles.solutions} dir={language == 'ar' ? 'rtl' : 'ltr'}>
+    <div className={styles.solutions}>
       <SectionTitle title={t('title')} subtitle={t('subtitle')} />
       <div className={styles.cards}>
         {Data.slice(0, 3).map((solution: any) => (

@@ -6,7 +6,7 @@ import { localePrefix } from '@/navigation';
 export async function middleware(request: NextRequest, event: NextFetchEvent) {
   /* First, handle the i18n routing */
   const handleI18nRouting = createMiddleware({
-    locales: ['en', 'ar'],
+    locales: ['en', 'np'],
     defaultLocale: 'en',
     localePrefix,
   });

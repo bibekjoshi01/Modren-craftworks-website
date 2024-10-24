@@ -7,8 +7,8 @@ import Product from '../Products';
 import ContactSection from '../Contact';
 import Maintenance from '../Maintenance';
 
-import { maintainanceSolutionData } from '../data/solutionSectionData';
-import productData from '../data/productSectionData';
+import { maintainanceSolutionData } from '../../data/solutionSectionData';
+import productData from '../../data/productSectionData';
 
 const HomePage = async () => {
   try {

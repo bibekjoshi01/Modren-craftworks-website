@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { getMenuLinks } from '../menuLinks';
+import { getMenuLinks } from '../../data/menuLinks';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoClose } from 'react-icons/io5';
 import styles from './MobileHeader.module.scss';
@@ -56,7 +56,7 @@ const MobileHeader = () => {
   }, [language, pathname, router, selectedLanguage]);
 
   const handleLanguageSwitch = () => {
-    const newLanguage = language === 'en' ? 'ar' : 'en';
+    const newLanguage = language === 'en' ? 'np' : 'en';
 
     // Set the cookie
     document.cookie = `NEXT_LOCALE=${newLanguage}; path=/`;
@@ -108,7 +108,7 @@ const MobileHeader = () => {
             ))}
           </ul>
           <div className={styles.languageSwitch} onClick={handleLanguageSwitch}>
-            {language === 'en' ? 'العربية' : 'English'}
+            {language === 'en' ? 'नेपाली' : 'English'}
           </div>
         </div>
       </div>

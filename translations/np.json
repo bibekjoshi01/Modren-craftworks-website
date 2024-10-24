@@ -1,12 +1,12 @@
 {
   "menu": {
-    "home": "Home",
-    "projects": "Projects",
-    "products": "Products",
-    "consultation": "Consultation",
-    "maintenanceAndService": "Maintenance and Service",
-    "about": "About",
-    "contact": "Contact"
+    "home": "गृहपृष्ठ",
+    "projects": "परियोजनाहरू",
+    "products": "उत्पादनहरू",
+    "consultation": "परामर्श",
+    "maintenanceAndService": "मर्मत र सेवा",
+    "about": "हाम्रो बारेमा",
+    "contact": "सम्पर्क"
   },
   "footer": {
     "title": "CONTACT US",

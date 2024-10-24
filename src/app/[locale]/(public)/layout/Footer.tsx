@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import styles from './Footer.module.scss';
 import ArrowRightSVG from '../ui/ArrowRightSVG';
-// import Logo from '../assets/images/logo.png';
+import Logo from '../assets/images/logo.png';
 import {
   LinkedInSVG,
   LocationSVG,
@@ -14,8 +14,7 @@ import {
   XSVG,
 } from '../ui/ContactInfo';
 import { FilledBtn } from '../ui/Button';
-import { getFooterData } from './footerData';
-import Logo from '../ui/Logo';
+import { getFooterData } from '../data/footerData';
 
 const Footer = () => {
   const t = useTranslations('footer');
@@ -29,8 +28,7 @@ const Footer = () => {
   return (
     <div className={styles.footer} dir={language == 'ar' ? 'rtl' : 'ltr'}>
       <div className={styles.logo}>
-        <Logo />
-        {/* <Image priority={true} src={Logo} width={900} height={500} alt="Logo" /> */}
+        <Image priority={true} src={Logo} width={900} height={500} alt="Logo" />
       </div>
 
       <div className={styles.footerLinks}>

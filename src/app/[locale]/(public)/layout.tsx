@@ -8,13 +8,13 @@ import MobileHeader from './layout/MobileHeader';
 
 interface Props {
   children: React.ReactNode;
-  params: { locale: 'en' | 'ar' };
+  params: { locale: 'en' | 'np' };
 }
 
 export const metadata: Metadata = {
-  title: 'Emkaan Medican Co.',
+  title: 'MODREN Craftworks',
   description: '',
-  icons: './assets/images/icon.ico',
+  icons: '/favicon.ico',
 };
 
 const RootLayout: React.FC<Props> = ({ children, params: { locale } }) => {

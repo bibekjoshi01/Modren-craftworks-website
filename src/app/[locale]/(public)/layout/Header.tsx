@@ -5,9 +5,8 @@ import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.scss';
-// import Logo from '../assets/images/logo.png';
-import { getMenuLinks } from './menuLinks';
-import Logo from '../ui/Logo';
+import { getMenuLinks } from '../data/menuLinks';
+import Logo from '../assets/images/logo.png';
 
 const Header = () => {
   const t = useTranslations();
@@ -50,7 +49,7 @@ const Header = () => {
   }, [language, pathname, router, selectedLanguage]);
 
   const handleLanguageSwitch = () => {
-    const newLanguage = language === 'en' ? 'ar' : 'en';
+    const newLanguage = language === 'en' ? 'np' : 'en';
 
     // Set the cookie
     document.cookie = `NEXT_LOCALE=${newLanguage}; path=/`;
@@ -61,20 +60,12 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={`${styles.header} ${selectedLanguage == 'ar' && 'rtl'}`}
-      dir={selectedLanguage == 'ar' ? 'rtl' : 'ltr'}
-    >
+    <header className={`${styles.header}`}>
       <div className={styles.logo}>
-        <Logo />
-        {/* <Image priority src={Logo} width={900} height={500} alt="Logo" /> */}
+        <Image priority src={Logo} width={1000} height={500} alt="Logo" />
       </div>
       <nav className={styles.nav}>
-        <ul
-          className={`${styles.navLinks} ${
-            selectedLanguage == 'ar' && styles.rtl
-          }`}
-        >
+        <ul className={`${styles.navLinks}`}>
           {menuLinks.map((link, index) => {
             const strippedPath = pathname.split('/').slice(2).join('/');
             const linkPath = link.path.replace(/^\//, '');
@@ -98,7 +89,7 @@ const Header = () => {
         </ul>
 
         <div className={styles.languageSwitch} onClick={handleLanguageSwitch}>
-          {language === 'en' ? 'العربية' : 'English'}
+          {language === 'en' ? 'नेपाली' : 'English'}
         </div>
       </nav>
     </header>
