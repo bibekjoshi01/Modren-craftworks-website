@@ -24,12 +24,12 @@ const ProjectCard = ({ data, language }: any) => {
             !data?.description_en && styles.center
           }`}
         >
-          {language == 'ar' ? data?.title_ar : data?.title_en}
+          {language == 'np' ? data?.title_np : data?.title_en}
         </h1>
         {data?.description_en && (
           <p className={styles.details}>
-            {language === 'ar'
-              ? stripHtmlTags(data?.description_ar)
+            {language === 'np'
+              ? stripHtmlTags(data?.description_np)
               : stripHtmlTags(data?.description_en)}
           </p>
         )}

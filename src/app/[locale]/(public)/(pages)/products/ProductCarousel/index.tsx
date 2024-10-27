@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import styles from './ProductCarousel.module.scss';
-import Image1 from '../../../assets/productSectionImages/image1.png';
+import Image1 from '../../../assets/products/image1.png';
 import type { Swiper as SwiperType } from 'swiper';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 
