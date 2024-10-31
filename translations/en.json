@@ -91,6 +91,7 @@
     "form": {
       "title": "Let’s Talk!",
       "full_name": "Full Name",
+      "phoneNumber": "Phone Number",
       "email": "Email",
       "message": "Type your message..",
       "submit": "Send"

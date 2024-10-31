@@ -65,6 +65,7 @@ const ContactForm = () => {
                 placeholder={t('form.full_name')}
               />
               <input type="email" name="email" placeholder={t('form.email')} />
+              <input type="tel" placeholder={t('form.phoneNumber')} />
               <textarea
                 name="message"
                 placeholder={t('form.message')}

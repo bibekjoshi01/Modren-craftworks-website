@@ -38,12 +38,12 @@
   flex: 1;
 
   h1 {
-    @include font(var(--reg-helveticaNeue-bukra), 44px, 500);
+    @include font(var(--HelveticaNeue), 44px, 500);
     text-transform: uppercase;
   }
 
   p {
-    @include font(var(--reg-helvetica-bukra), 18px, 400);
+    @include font(var(--helvetica), 18px, 400);
     line-height: 1.6;
     letter-spacing: 0.1px;
   }
@@ -114,7 +114,7 @@
 }
 
 .form {
-  padding: 0 50px;
+  padding: 0 20px;
 
   @include md {
     padding: 0 20px;
@@ -127,13 +127,13 @@
   }
 
   h2 {
-    @include font(var(--reg-helvetica-bukra), 28px, 400);
+    @include font(var(--helvetica), 28px, 400);
     letter-spacing: 1.5px;
   }
 
   input,
   textarea {
-    font-family: var(--reg-roboto-bukra);
+    font-family: var(--roboto);
     width: 100%;
     padding: 16px 20px;
     margin-block: 10px;
@@ -150,7 +150,7 @@
 
   input::placeholder,
   textarea::placeholder {
-    font-family: var(--reg-roboto-bukra);
+    font-family: var(--roboto);
     font-weight: 300;
     color: #ababab;
   }
