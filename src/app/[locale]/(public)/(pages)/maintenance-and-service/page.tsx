@@ -1,6 +1,5 @@
 import Banner from './Banner';
 import MaintenanceHero from './MaintenanceHero';
-import Slider from './MaintenanceHero/Slider';
 import ServicesSection from './Services';
 import styles from './Maintenence.module.scss';
 

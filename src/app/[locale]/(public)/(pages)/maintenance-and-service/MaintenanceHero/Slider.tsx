@@ -3,9 +3,9 @@ import React from 'react';
 import styles from './Slider.module.scss';
 import Image, { StaticImageData } from 'next/image';
 import useImageSliderWithViewTransition from '../../../hooks/useImageSliderWithViewTransition';
-import image1 from '../../../assets/solutionSectionImages/maintainanceSolutionImages/image1.png';
-import image2 from '../../../assets/solutionSectionImages/maintainanceSolutionImages/image2.png';
-import image3 from '../../../assets/solutionSectionImages/maintainanceSolutionImages/image3.png';
+import image1 from '../../../assets/maintainance/image1.png';
+import image2 from '../../../assets/maintainance/image2.png';
+import image3 from '../../../assets/maintainance/image3.png';
 
 // Define initial images
 type imageData = {
