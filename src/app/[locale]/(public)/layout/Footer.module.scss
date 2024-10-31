@@ -15,10 +15,9 @@
     }
 
     img {
-      aspect-ratio: 2.5 / 1;
+      max-height: 50px;
+      min-width: 180px;
       max-width: 250px;
-      height: auto;
-      margin-left: -20px;
     }
   }
 

@@ -59,65 +59,58 @@ export default function RootLayout({
   // Extract the language (first path segment)
   const language = pathname?.split('/')[1] || 'en';
   // Determine the font class based on language
-  useEffect(() => {
-    // Update CSS variables based on language
-    if (language === 'ar') {
-      //change font roboto to bukra regular when changing language to ar
-      document.documentElement.style.setProperty(
-        '--reg-roboto-bukra',
-        'var(--bukra-regular)'
-      );
+  // useEffect(() => {
+  //   // Update CSS variables based on language
+  //   if (language === 'np') {
+  //     //change font roboto to bukra regular when changing language to ar
+  //     document.documentElement.style.setProperty(
+  //       '--reg-roboto-bukra',
+  //       'var(--bukra-regular)'
+  //     );
 
-      document.documentElement.style.setProperty(
-        '--reg-helveticaNeue-bukra',
-        'var(--bukra-regular)'
-      );
+  //     document.documentElement.style.setProperty(
+  //       '--reg-helveticaNeue-bukra',
+  //       'var(--bukra-regular)'
+  //     );
 
-      document.documentElement.style.setProperty(
-        '--med--helveticaNeueMedium-bukra',
-        'var(--bukra-medium)'
-      );
+  //     document.documentElement.style.setProperty(
+  //       '--med--helveticaNeueMedium-bukra',
+  //       'var(--bukra-medium)'
+  //     );
 
-      document.documentElement.style.setProperty(
-        '--reg-helvetica-bukra',
-        'var(--bukra-regular)'
-      );
-    } else {
-      document.documentElement.style.setProperty(
-        '--reg-roboto-bukra',
-        'var(--roboto)'
-      );
+  //     document.documentElement.style.setProperty(
+  //       '--reg-helvetica-bukra',
+  //       'var(--bukra-regular)'
+  //     );
+  //   } else {
+  //     document.documentElement.style.setProperty(
+  //       '--reg-roboto-bukra',
+  //       'var(--roboto)'
+  //     );
 
-      document.documentElement.style.setProperty(
-        '--reg-helveticaNeue-bukra',
-        'var(--HelveticaNeue)'
-      );
+  //     document.documentElement.style.setProperty(
+  //       '--reg-helveticaNeue-bukra',
+  //       'var(--HelveticaNeue)'
+  //     );
 
-      document.documentElement.style.setProperty(
-        '--med--helveticaNeueMedium-bukra',
-        'var(--HelveticaNeue-medium)'
-      );
+  //     document.documentElement.style.setProperty(
+  //       '--med--helveticaNeueMedium-bukra',
+  //       'var(--HelveticaNeue-medium)'
+  //     );
 
-      document.documentElement.style.setProperty(
-        '--reg-helvetica-bukra',
-        'var(--helvetica)'
-      );
-    }
-  }, [language]);
+  //     document.documentElement.style.setProperty(
+  //       '--reg-helvetica-bukra',
+  //       'var(--helvetica)'
+  //     );
+  //   }
+  // }, [language]);
 
   return (
     <html
       className={`${BukraBold.variable} ${BukraMedium.variable} ${BukraRegular.variable} ${Helvetica.variable} ${HelveticaNeue.variable} ${HelveticaNeueMedium.variable} ${roboto.variable}`}
       lang={language === 'ar' ? 'ar' : 'en'}
     >
-      <body
-      // style={{
-      //   fontFamily:
-      //     language == 'ar' ? 'var(--bukra-regular) !important' : 'unset',
-      // }}
-      >
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
