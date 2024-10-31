@@ -101,20 +101,23 @@
     "hero": {
       "title": "ABOUT US",
       "heading": "We Are",
-      "aboutText": "Emkaan Medical Company was established in Riyadh, KSA on solid grounds and is considered as an extension of the knowledge and expertise obtained by Scientific Diamond Company which was originally established in 2015 in KSA and UAE. Emkaan is managed and operated by an elite of high-profile specialists with years of experience in the field."
+      "aboutText": "MODREN Craftworks was founded with a passion for exceptional furniture design and craftsmanship. Built on a solid foundation of expertise and creativity, we specialize in creating bespoke furniture solutions tailored to each client’s unique vision. Our team of skilled artisans and designers bring years of experience, ensuring that every piece is crafted with precision, quality, and an eye for detail. MODREN Craftworks is committed to transforming spaces into inspiring environments that reflect the distinct style and needs of our clients."
     },
     "ourStory": {
-      "title": "Our Story"
+      "title": "Our Story",
+      "description": "MODREN Craftworks was born out of a passion for artistry and a commitment to quality. From humble beginnings to a trusted name in bespoke furniture, our journey is driven by the desire to create pieces that blend functionality with elegance. Every piece we design tells a story, capturing the essence of the spaces we help transform."
     },
     "ourVision": {
-      "title": "Our Vision"
+      "title": "Our Vision",
+      "description": "To become a leader in custom furniture design by consistently delivering high-quality, innovative, and aesthetically pleasing pieces. We envision a world where furniture is not just functional but an expression of style, tailored uniquely for each client’s space and lifestyle."
     },
     "ourObjective": {
-      "title": "Our Objective"
+      "title": "Our Objective",
+      "description": "At MODREN Craftworks, our objective is to bring our clients' visions to life through furniture that reflects their individuality. We strive to provide personalized solutions, combining skilled craftsmanship with a keen eye for design to create pieces that are both practical and timeless."
     },
     "visionSection": {
-      "title": "Fulfilling The Kingdom’s Vision 2030",
-      "description": "Deeply Aligned With The Kingdom’s Vision 2030, Our Endeavors Go Beyond Business. We're On A Mission To Contribute Significantly To The Nation's Growth Narrative. By Bolstering Businesses And Encouraging Entrepreneurial Spirit, We Pledge To Play A Decisive Role In Realizing This Ambitious Vision."
+      "title": "Crafting a Legacy of Excellence",
+      "description": "MODREN Craftworks is dedicated to building a legacy of design excellence and quality craftsmanship. Beyond just creating furniture, we aim to make a lasting impact on the industry by championing innovation, sustainability, and client satisfaction. We aspire to inspire others in the field and contribute meaningfully to the growth of custom furniture artistry."
     }
   },
   "maintenance": {

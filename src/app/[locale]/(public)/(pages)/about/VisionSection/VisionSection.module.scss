@@ -55,7 +55,7 @@
     }
 
     .description {
-      @include font(var(--reg-helvetica-bukra), 24px, 400);
+      @include font(var(--bukra-regular), 22px, 400);
       color: $text-color-2;
       line-height: 1.6;
 
@@ -75,7 +75,7 @@
   .imageContainer {
     display: flex;
     justify-content: center;
-    max-width: 300px;
+    max-width: 500px;
 
     .visionImage {
       width: 100%;
