@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import styles from './Products.module.scss';
 import SectionTitle from '../../ui/SectionTitle';
 import { FilledBtn } from '../../ui/Button';
@@ -7,7 +7,14 @@ import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import ArrowRightSVG from '../../ui/ArrowRightSVG';
 
-const Product = ({ Data }) => {
+interface Product {
+  id: number;
+  titleEn: string;
+  titleNp: string;
+  imageSrc: StaticImageData;
+}
+
+const Product = ({ Data }: { Data: Product[] }) => {
   const t = useTranslations('home.products');
   const pathname = usePathname();
 
@@ -15,14 +22,14 @@ const Product = ({ Data }) => {
   const language = pathname?.split('/')[1] || 'en';
 
   return (
-    <div className={styles.products} dir={language == 'ar' ? 'rtl' : 'ltr'}>
+    <div className={styles.products}>
       <SectionTitle title={t('title')} subtitle={t('subtitle')} />
       <p className={styles.detail}>{t('detail')}</p>
       <div className={styles.cards}>
         {Data?.slice(0, 8).map((product) => (
           <ProductCard
             key={product.id}
-            title={product.title}
+            title={language == 'en' ? product.titleEn : product.titleNp}
             imageSrc={product.imageSrc}
           />
         ))}
@@ -34,7 +41,13 @@ const Product = ({ Data }) => {
 
 export default Product;
 
-function ProductCard({ title, imageSrc }) {
+function ProductCard({
+  title,
+  imageSrc,
+}: {
+  title: string;
+  imageSrc: StaticImageData;
+}) {
   return (
     <>
       <div className={styles.card}>
