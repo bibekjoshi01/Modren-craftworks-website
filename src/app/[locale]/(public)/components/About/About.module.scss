@@ -5,7 +5,7 @@
   @include flex(center, center, row, 60px);
   max-width: $maxWidth;
   margin: 0 auto;
-  padding: 10rem 100px;
+  padding: 10rem 40px;
   font-family: $secondaryFont;
   position: relative;
 
@@ -13,37 +13,17 @@
     position: absolute;
     background-size: cover;
     height: 50%;
-    // width: 100%; media query
-    // border: 1px solid green;
-    // top: 0;
     right: 0;
     bottom: 0;
     width: 50%;
     z-index: -1;
   }
 
-  // .gradientEllipse {
-  //   position: absolute;
-  //   width: 2111.97px;
-  //   height: 2111.97px;
-  //   left: -135vw;
-  //   // top: 110%;
-  //   top: 0;
-  //   z-index: -1;
-  //   transform: rotate(68.76deg);
-  //   background: linear-gradient(135deg, #045161 24%, #ffffff 60%);
-  //   border-radius: 50%;
-  //   filter: blur(500px);
-  // }
   .gradientEllipse {
     position: absolute;
     width: 100%;
     height: 100%;
-    // left: -40% !important;
     left: -40% !important;
-
-    // opacity: ;
-    // top: 110%;
     top: 65%;
     z-index: -1;
     transform: rotate(68.76deg);
@@ -52,17 +32,6 @@
     filter: blur(500px);
     overflow-x: hidden;
   }
-
-  //   .gradientEllipse {
-  //   position: absolute;
-  //   width: 2111.97px;
-  //   height: 2111.97px;
-  //   left: 1229.51px;
-  //   transform: rotate(68.76deg);
-  //   background: linear-gradient(135deg, #045161 24%, #ffffff 60%);
-  //   border-radius: 50%;
-  //   filter: blur(500px);
-  // }
 
   @include lg {
     padding: 10rem 80px;
@@ -79,15 +48,13 @@
       width: 95%;
       height: 30% !important;
       z-index: -1;
-
-
     }
     .gradientEllipse {
       width: 100%;
       height: 100%;
       left: -150% !important;
       z-index: -1;
-      background: linear-gradient(135deg, #045161 200%, #ffffff 60%) ;
+      background: linear-gradient(135deg, #045161 200%, #ffffff 60%);
     }
   }
 
@@ -170,10 +137,10 @@
     }
 
     .aboutText {
-      @include font(var(--reg-helvetica-bukra), 24px, 400);
+      @include font(var(--helvetica), 22px, 400);
       color: $text-color-3;
       margin: auto 0;
-      line-height: 1.2;
+      line-height: 1.4;
 
       @include xxl {
         padding-right: 150px;

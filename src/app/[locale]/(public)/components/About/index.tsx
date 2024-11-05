@@ -2,7 +2,7 @@
 import React from 'react';
 import { MouseEvent } from 'react';
 import Image from 'next/image';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import styles from './About.module.scss';
 import image1 from '../../assets/aboutSectionImages/image1.png';
@@ -13,15 +13,10 @@ import ArrowRightSVG from '../../ui/ArrowRightSVG';
 
 import bgImage1 from '../../../../../../public/svg/Group49.png';
 
-
 const About = () => {
   const { image } = useImageSlider([image1, image2, image3], 1500);
   const t = useTranslations('home.about');
   const router = useRouter();
-  const pathname = usePathname();
-
-  // Extract the language (first path segment)
-  const language = pathname?.split('/')[1] || 'en';
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -29,12 +24,9 @@ const About = () => {
   };
 
   return (
-    <div className={styles.about} dir={language == 'ar' ? 'rtl' : 'ltr'}>
-      <div className={styles.gradientEllipse}>
-
-      </div>
+    <div className={styles.about}>
+      <div className={styles.gradientEllipse}></div>
       <div>
-        {' '}
         <Image
           src={bgImage1}
           width={0}
@@ -49,7 +41,9 @@ const About = () => {
       </div>
       <div className={styles.right}>
         <span className={styles.title}>{t('title')}</span>
-        <h1 className={styles.heading}>{t('heading')} </h1>
+        <h1 className={styles.heading}>
+          {t('heading')} <span>MODREN</span>
+        </h1>
         <p className={styles.aboutText}>{t('aboutText')}</p>
         <div>
           <button onClick={handleClick} className={styles.outlinedBtn}>
