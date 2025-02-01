@@ -14,21 +14,18 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'flagcdn.com',
       },
-      {
-        protocol: 'http',
-        hostname: '127.0.0.1',
-        port: '8000', 
-      },
-      {
-        protocol: 'https',
-        hostname: 'emkaan.merakitechs.com',
-      },
     ],
   },
-  webpack(config, options) {
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
     return config;
   },
-  enableSvg: true,
+  env: {
+    _next_intl_trailing_slash: '',
+  },
 };
 
 const withNextIntl = createNextIntlPlugin();

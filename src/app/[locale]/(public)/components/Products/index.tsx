@@ -6,6 +6,7 @@ import { FilledBtn } from '../../ui/Button';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import ArrowRightSVG from '../../ui/ArrowRightSVG';
+import React from 'react';
 
 interface Product {
   id: number;
@@ -49,11 +50,11 @@ function ProductCard({
   imageSrc: StaticImageData;
 }) {
   return (
-    <>
+    <React.Fragment>
       <div className={styles.card}>
         <Image src={imageSrc} width={200} height={200} alt="logo" />
         <h1>{title}</h1>
       </div>
-    </>
+    </React.Fragment>
   );
 }
